@@ -1,4 +1,4 @@
-# 🚀 Projet A3E - InfraQC Beta
+# 🚀 Projet A3E -  Beta
 
 [![Private Repository](https://img.shields.io/badge/Repository-Private-red.svg)](https://github.com/MacroMan5/project_a3e_beta)
 [![Status](https://img.shields.io/badge/Status-Planning%20Phase-yellow.svg)]()

@@ -6,7 +6,7 @@
 
 ## 📋 Description
 
-**InfraQC** est une plateforme SaaS de gestion de construction spécialement conçue pour le secteur public québécois. Cette solution vise à remplacer les outils Excel et les processus manuels par une plateforme moderne, conforme à la Loi 25 et adaptée aux besoins spécifiques du marché québécois.
+**Beta** est une plateforme SaaS de gestion de construction spécialement conçue pour le secteur public québécois. Cette solution vise à remplacer les outils Excel et les processus manuels par une plateforme moderne, conforme à la Loi 25 et adaptée aux besoins spécifiques du marché québécois.
 
 ## 🎯 Vision
 

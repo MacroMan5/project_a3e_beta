@@ -2,10 +2,10 @@
 ## Plateforme de Gestion Construction Québec - Sans Financement Initial
 
 > **Document stratégique** - Approche Lean Startup adaptée au marché B2G québécois  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Méthodologie**: Build-Measure-Learn avec contraintes zéro capital
 
-📚 **[← Retour README](../../README.md)** | **[→ Business Model Canvas](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ PRD MVP](../5_product_specifications/PRD_PHASE1_MVP.md)**
+📚 **[← Retour README](../../README.md)** | **[→ Business Model Canvas](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ PRD MVP](../6_product_specifications/PRD_PHASE1_MVP.md)**
 
 ---
 
@@ -23,20 +23,20 @@ gantt
     axisFormat  %m-%Y
     
     section Phases
-    Phase 0: Validation Lean       :p0, 07-2025, 2M
+    Phase 0: Validation Lean       :p0, 07-2024, 2M
     Phase 1: MVP Ultra-Minimal     :p1, after p0, 3M
     Phase 2: Premiers Revenus      :p2, after p1, 4M
     Phase 3: Croissance Organique  :p3, after p2, 9M
     Phase 4: Financement Stratégique :p4, after p3, 12M
     
     section Équipe
-    1-2 Personnes      :e1, 07-2025, 5M
+    1-2 Personnes      :e1, 07-2024, 5M
     2-3 Personnes      :e2, after e1, 4M
     3-5 Personnes      :e3, after e2, 9M
     5-10+ Personnes    :e4, after e3, 12M
     
     section Finance
-    0$ MRR        :f1, 07-2025, 5M
+    0$ MRR        :f1, 07-2024, 5M
     500$-2000$ MRR :f2, after f1, 4M
     4k$-15k$ MRR  :f3, after f2, 9M
     20k$-100k$ MRR :f4, after f3, 12M
@@ -459,7 +459,7 @@ Monthly:
 
 #### Roadmap Features
 ```yaml
-Q4 2025 (Mois 10-12):
+Q4 2024 (Mois 10-12):
   Feature #2: Gestion documentaire
     - Upload/versioning
     - Permissions granulaires
@@ -499,7 +499,7 @@ timeline
         Rapports de Visite/Hub Communication : Core feature
         Auth & Permissions : Base utilisateurs
         Mobile Responsive : Accessibilité terrain
-    section Q4 2025 (Mois 10-12)
+    section Q4 2024 (Mois 10-12)
         Gestion Documentaire : Upload/versioning/permissions
         Intégration SEAO : Import/export appels d'offres
     section Q1 2026 (Mois 13-15)
@@ -961,5 +961,5 @@ Ce roadmap prouve qu'il est possible de bâtir une entreprise SaaS B2G rentable 
 ---
 
 *Document vivant - À réviser mensuellement*  
-*Dernière mise à jour : Juillet 2025*  
+*Dernière mise à jour : Juillet 2024*  
 *Prochaine révision : Après 20 customer interviews*

@@ -2,12 +2,12 @@
 ## Plan d'Action Post-Documentation Stratégique
 
 > **Guide d'action** - Prochaines étapes critiques après finalisation documentation  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Urgence**: IMMÉDIATE  
 > **Délai**: 7-14 jours maximum  
 > **Status**: Prêt à exécution
 
-📚 **[← Validation Plan](./VALIDATION_PLAN.md)** | **[→ MVP Execution Plan](../5_product_specifications/MVP_EXECUTION_PLAN.md)** | **[→ Project Overview](./PROJECT_OVERVIEW.md)** | **[← Retour README](../../README.md)**
+📚 **[← Validation Plan](./VALIDATION_PLAN.md)** | **[→ MVP Execution Plan](../6_product_specifications/MVP_EXECUTION_PLAN.md)** | **[→ Project Overview](./PROJECT_OVERVIEW.md)** | **[← Retour README](../../README.md)**
 
 ---
 
@@ -123,7 +123,7 @@ Marketing/outreach: 500$
 ```
 
 ### **MVP Development (si validation OK): 50,000$**
-Référence: [MVP Execution Plan Budget](../5_product_specifications/MVP_EXECUTION_PLAN.md#budget-16-semaines)
+Référence: [MVP Execution Plan Budget](../6_product_specifications/MVP_EXECUTION_PLAN.md#budget-16-semaines)
 
 ---
 
@@ -237,5 +237,5 @@ Learning: Expérience + réseau + éviter sunk cost fallacy
 ---
 
 *Document d'action - Pour exécution immédiate*  
-*Dernière mise à jour : Juillet 2025*  
+*Dernière mise à jour : Juillet 2024*  
 *Deadline première action : AUJOURD'HUI*

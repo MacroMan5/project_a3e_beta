@@ -1,7 +1,7 @@
 # 📊 GUIDE MERMAID - Bonnes Pratiques Documentation A3E
 
 > **Document technique** - Guide de référence pour les diagrammes Mermaid  
-> **Date**: 3 Juillet 2025  
+> **Date**: 3 Juillet 2024  
 > **Version**: 2.0 - Standardisée  
 > **Maintainer**: Équipe Architecture
 
@@ -170,7 +170,7 @@ gantt
     axisFormat  %m-%Y
     
     section Phase 1
-    Tâche A       :a1, 07-2025, 2M
+    Tâche A       :a1, 07-2024, 2M
     Tâche B       :a2, after a1, 1M
     
     section Phase 2
@@ -336,11 +336,11 @@ PRIORITY_LOW: { fill: '#E8F5E8', stroke: '#388E3C', color: '#1B5E20' }
 timeline
     title Roadmap Projet A3E
     
-    section Q3 2025
+    section Q3 2024
         Validation : Customer Discovery : Problem-Solution Fit
         MVP : Développement MVP : Alpha Testing
     
-    section Q4 2025
+    section Q4 2024
         Launch : Beta Launch : Premiers Clients
         Growth : Product-Market Fit : Scaling
 ```
@@ -549,5 +549,5 @@ graph TD
 ---
 
 *Document de référence technique V2.0 - Standards améliorés constants.js*  
-*Dernière mise à jour : 3 Juillet 2025*  
+*Dernière mise à jour : 3 Juillet 2024*  
 *Contact : Équipe Architecture - Version Enhanced*

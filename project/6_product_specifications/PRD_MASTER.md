@@ -2,7 +2,7 @@
 ## Product Requirements Document - A3E Beta Platform
 
 > **Document produit officiel** - Spécifications complètes pour développement  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Version**: 1.0  
 > **Équipe**: Fondateurs + Développement
 
@@ -13,7 +13,7 @@
 Cette PRD est divisée en plusieurs documents pour une meilleure lisibilité et gestion:
 
 1. [**PRD_MASTER**](./PRD_MASTER.md) - Vue d'ensemble, stratégie et analyse de marché (ce document)
-2. [**PRD_PHASE1_MVP**](./PRD_PHASE1_MVP.md) - Validation et MVP (Mois 1-9)
+2. [**PRD_PHASE1_MVP**](./PRD_PHASE1_MVP.md) - Validation et MVP (Mois 3-9)
 3. [**PRD_PHASE2_EXPANSION**](./PRD_PHASE2_EXPANSION.md) - Expansion et croissance (Mois 10-18)
 4. [**PRD_PHASE3_PLATFORM**](./PRD_PHASE3_PLATFORM.md) - Plateforme mature et scaling (Mois 19-30)
 
@@ -38,28 +38,22 @@ Plateforme **tout-en-un** québécoise avec:
 - 🛡️ **Conformité Loi 25** garantie par design
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph LR
-    classDef problem fill:#E53935,stroke:#C62828,color:white
-    classDef solution fill:#43A047,stroke:#2E7D32,color:white
-    classDef benefit fill:#1E88E5,stroke:#1565C0,color:white
-
-    A[Fragmentation<br/>Données] -->|Cause| B[Inefficacité<br/>Opérationnelle]
-    C[Excel/Email<br/>Obsolètes] -->|Cause| B
-    D[Non-conformité<br/>Loi 25] -->|Cause| E[Risque<br/>Légal]
+    Problems[Problèmes<br/>Actuels] --> Solution[A3E Beta<br/>Plateforme]
+    Solution --> Benefits[Bénéfices<br/>Créés]
     
-    F[Plateforme<br/>Unifiée A3E Beta] -->|Résout| A
-    F -->|Remplace| C
-    F -->|Garantit| D
+    classDef problem fill:#FFCDD2,stroke:#D32F2F,color:#B71C1C,font-size:14px
+    classDef solution fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:16px
+    classDef benefit fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:14px
     
-    F -->|Crée| G[Économie<br/>10h/semaine]
-    F -->|Crée| H[Traçabilité<br/>Complète]
-    F -->|Crée| I[Collaboration<br/>Temps Réel]
-    
-    class A,C,D,B,E problem
-    class F solution
-    class G,H,I benefit
+    class Problems problem
+    class Solution solution
+    class Benefits benefit
 ```
+
+**Problèmes résolus :** Fragmentation données, Excel/Email obsolètes, Non-conformité Loi 25  
+**Bénéfices créés :** Économie 10h/semaine, Traçabilité complète, Collaboration temps réel
 
 ---
 
@@ -150,7 +144,7 @@ Phase 3 (Mainstream):
   - Expansion géographique
 ```
 
-Voir le [ROADMAP_STRATEGIQUE_BOOTSTRAP.md](../6_implementation_roadmap/ROADMAP_STRATEGIQUE_BOOTSTRAP.md) pour le plan détaillé de croissance sans financement externe.
+Voir le [ROADMAP_STRATEGIQUE_BOOTSTRAP.md](../8_implementation_roadmap/ROADMAP_STRATEGIQUE_BOOTSTRAP.md) pour le plan détaillé de croissance sans financement externe.
 
 ---
 
@@ -175,40 +169,52 @@ Voir le [ROADMAP_STRATEGIQUE_BOOTSTRAP.md](../6_implementation_roadmap/ROADMAP_S
    - Besoins: Rapports mobile, photos annotations, checklists dynamiques
    - Pain points: Formulaires papier, retranscription manuelle
 
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
-graph TD
-    classDef director fill:#5C6BC0,stroke:#3949AB,color:white
-    classDef manager fill:#26A69A,stroke:#00897B,color:white
-    classDef inspector fill:#EF5350,stroke:#E53935,color:white
-    classDef platform fill:#66BB6A,stroke:#43A047,color:white
+### **Persona 1: Directeur Infrastructure**
 
-    D[Directeur<br/>Infrastructure] -->|Utilise| D1[Dashboard<br/>Analytics]
-    D -->|Utilise| D2[Priorisation<br/>Projets]
-    D -->|Utilise| D3[Reporting<br/>Exécutif]
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    D[👨‍💼<br/>Directeur<br/>Infrastructure] --> D1[📊<br/>Dashboard<br/>Analytics]
+    D --> D2[⭐<br/>Priorisation<br/>Projets]
+    D --> D3[📋<br/>Reporting<br/>Exécutif]
     
-    M[Gestionnaire<br/>Projets] -->|Utilise| M1[Collaboration<br/>Documents]
-    M -->|Utilise| M2[Workflows<br/>Approbation]
-    M -->|Utilise| M3[Suivi<br/>Construction]
+    classDef director fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:14px
+    classDef feature fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C,font-size:14px
     
-    I[Inspecteur<br/>Terrain] -->|Utilise| I1[Rapports<br/>Mobile]
-    I -->|Utilise| I2[Photos<br/>Annotations]
-    I -->|Utilise| I3[Checklists<br/>Dynamiques]
+    class D director
+    class D1,D2,D3 feature
+```
+
+### **Persona 2: Gestionnaire Projets**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    M[👩‍🏗️<br/>Gestionnaire<br/>Projets] --> M1[📁<br/>Collaboration<br/>Documents]
+    M --> M2[⚡<br/>Workflows<br/>Approbation]
+    M --> M3[🏗️<br/>Suivi<br/>Construction]
     
-    P[Plateforme<br/>A3E Beta] --> D1
-    P --> D2
-    P --> D3
-    P --> M1
-    P --> M2
-    P --> M3
-    P --> I1
-    P --> I2
-    P --> I3
+    classDef manager fill:#E0F2F1,stroke:#00695C,color:#004D40,font-size:14px
+    classDef feature fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C,font-size:14px
     
-    class D,D1,D2,D3 director
-    class M,M1,M2,M3 manager
-    class I,I1,I2,I3 inspector
-    class P platform
+    class M manager
+    class M1,M2,M3 feature
+```
+
+### **Persona 3: Inspecteur Terrain**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    I[👷‍♂️<br/>Inspecteur<br/>Terrain] --> I1[📱<br/>Rapports<br/>Mobile]
+    I --> I2[📸<br/>Photos<br/>Annotations]
+    I --> I3[✅<br/>Checklists<br/>Dynamiques]
+    
+    classDef inspector fill:#FCE4EC,stroke:#C2185B,color:#880E4F,font-size:14px
+    classDef feature fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C,font-size:14px
+    
+    class I inspector
+    class I1,I2,I3 feature
 ```
 
 ---
@@ -225,19 +231,19 @@ gantt
     axisFormat  %m-%Y
     
     section Phases
-    Phase 0: Validation       :p0, 07-2025, 2M
+    Phase 0: Validation       :p0, 07-2024, 2M
     Phase 1: MVP              :p1, after p0, 7M
     Phase 2: Expansion        :p2, after p1, 9M
     Phase 3: Plateforme       :p3, after p2, 12M
     
     section Clients
-    0 clients                 :c0, 07-2025, 2M
+    0 clients                 :c0, 07-2024, 2M
     5-10 clients pilotes      :c1, after c0, 7M
     10-50 clients             :c2, after c1, 9M
     50-200+ clients           :c3, after c2, 12M
     
     section Équipe
-    2 fondateurs              :e1, 07-2025, 9M
+    2 fondateurs              :e1, 07-2024, 9M
     3-5 personnes             :e2, after e1, 9M
     5-15 personnes            :e3, after e2, 12M
 ```
@@ -245,48 +251,33 @@ gantt
 ### Vue d'ensemble du projet
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
-mindmap
-    root((A3E Beta))
-        Phase 1: MVP
-            Validation
-                Customer Discovery
-                Prototype Figma
-                Design Partners
-            Core Features
-                Planification
-                Conception
-                Construction
-                Maintenance
-            Mobile-First
-                Rapports Visite
-                Mode Hors-ligne
-        Phase 2: Expansion
-            Market Growth
-                10 → 50 clients
-                Outreach LinkedIn
-                Événements Sectoriels
-            Tech Scaling
-                Microservices
-                Mobile Native
-                Cloud Distribué
-            Features Avancées
-                Collaboration Temps Réel
-                Intégrations Gouvernement
-                Analytics Prédictifs
-        Phase 3: Plateforme
-            Innovation IA
-                Assistant Conversationnel
-                Maintenance Prédictive
-                Vision Computer
-            Scaling Enterprise
-                100+ Clients
-                Multi-région
-                SSO & Security
-            Expansion Géographique
-                Ontario Francophone
-                Nouveau-Brunswick
-                Reste Canada
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph TD
+    A3E[A3E Beta<br/>Platform] --> P1[Phase 1<br/>MVP]
+    A3E --> P2[Phase 2<br/>Expansion]  
+    A3E --> P3[Phase 3<br/>Plateforme]
+    
+    P1 --> P1A[Validation<br/>5-10 clients]
+    P1 --> P1B[4 Modules<br/>Core]
+    P1 --> P1C[Mobile<br/>PWA]
+    
+    P2 --> P2A[Croissance<br/>50 clients]
+    P2 --> P2B[Microservices<br/>Architecture]
+    P2 --> P2C[Features<br/>Avancées]
+    
+    P3 --> P3A[IA<br/>Innovation]
+    P3 --> P3B[Scaling<br/>200+ clients]
+    P3 --> P3C[Expansion<br/>Canada]
+    
+    classDef platform fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:16px
+    classDef phase1 fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef phase2 fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
+    classDef phase3 fill:#FCE4EC,stroke:#C2185B,color:#880E4F,font-size:14px
+    
+    class A3E platform
+    class P1,P1A,P1B,P1C phase1
+    class P2,P2A,P2B,P2C phase2
+    class P3,P3A,P3B,P3C phase3
 ```
 
 ---
@@ -295,46 +286,23 @@ mindmap
 
 ### **Architecture du Produit**
 
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
-graph TD
-    classDef plan fill:#42A5F5,stroke:#1976D2,color:white
-    classDef concept fill:#66BB6A,stroke:#388E3C,color:white
-    classDef construct fill:#FF9800,stroke:#F57C00,color:white
-    classDef maintain fill:#E91E63,stroke:#C2185B,color:white
-    classDef transverse fill:#7E57C2,stroke:#5E35B1,color:white
+📋 **Architecture complète détaillée** : [→ PRODUCT_STRATEGY.md](../3_product_strategy/PRODUCT_STRATEGY.md#architecture-globale-de-la-plateforme)
 
-    App[A3E Beta<br/>Plateforme] --> PLN[Module<br/>Planification]
-    App --> CON[Module<br/>Conception]
-    App --> CONS[Module<br/>Construction]
-    App --> MAINT[Module<br/>Maintenance]
-    App --> TRANS[Fonctionnalités<br/>Transversales]
+**Vue synthétique des 4 modules principaux :**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    A3E[A3E Beta<br/>Platform] --> PLN[📊<br/>Planification]
+    A3E --> CON[📐<br/>Conception]
+    A3E --> CONS[🏗️<br/>Construction]
+    A3E --> MAINT[🔧<br/>Maintenance]
     
-    PLN --> PLN1[Dashboard<br/>Parc Immobilier]
-    PLN --> PLN2[Liste Projets<br/>avec Statuts]
-    PLN --> PLN3[Budgets et<br/>Allocations]
+    classDef platform fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:16px
+    classDef module fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C,font-size:14px
     
-    CON --> CON1[Gestion<br/>Documentaire]
-    CON --> CON2[Commentaires<br/>Annotations]
-    CON --> CON3[PFT et<br/>Fiches Locaux]
-    
-    CONS --> CONS1[Rapports<br/>Visite Mobile]
-    CONS --> CONS2[Gestion<br/>Photos/Médias]
-    CONS --> CONS3[Suivi<br/>Progression]
-    
-    MAINT --> MAINT1[Inventaire<br/>Actifs]
-    MAINT --> MAINT2[Planification<br/>Inspections]
-    MAINT --> MAINT3[Historique<br/>Interventions]
-    
-    TRANS --> TRANS1[Auth et<br/>Sécurité]
-    TRANS --> TRANS2[Interface<br/>Responsive]
-    TRANS --> TRANS3[IA<br/>Conversationnelle]
-    
-    class PLN,PLN1,PLN2,PLN3 plan
-    class CON,CON1,CON2,CON3 concept
-    class CONS,CONS1,CONS2,CONS3 construct
-    class MAINT,MAINT1,MAINT2,MAINT3 maintain
-    class TRANS,TRANS1,TRANS2,TRANS3 transverse
+    class A3E platform
+    class PLN,CON,CONS,MAINT module
 ```
 
 Pour les spécifications détaillées de chaque module et feature, voir:
@@ -353,7 +321,7 @@ Pour les détails de l'architecture technique, voir [STACK_TECHNIQUE.md](../4_te
 | Étape | Timing | Clients | ARPU | MRR | ARR |
 |-------|--------|---------|------|-----|-----|
 | Fin Phase 1 (MVP) | Mois 9 | 10 | 100$/mois | 1,000$ | 12,000$ |
-| Fin Phase 2 (Expansion) | Mois 18 | 50 | 180$/mois | 9,000$ | 108,000$ |
+| Fin Phase 2 (Expansion) | Mois 18 | 50 | 180$/mois ARPU | 9,000$ | 108,000$ |
 | Fin Phase 3 (Platform) | Mois 30 | 200 | 200$/mois | 40,000$ | 480,000$ |
 | Post-Financement | Mois 36 | 500 | 220$/mois | 110,000$ | 1,320,000$ |
 
@@ -367,31 +335,30 @@ Pour les détails de l'architecture technique, voir [STACK_TECHNIQUE.md](../4_te
 ### **Funding Strategy**
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
-graph TD
-    classDef bootstrap fill:#66BB6A,stroke:#388E3C,color:white
-    classDef revenue fill:#42A5F5,stroke:#1976D2,color:white
-    classDef funding fill:#AB47BC,stroke:#7B1FA2,color:white
-
-    P1[Phase 1: MVP<br/>Mois 1-9] --> BS1[Bootstrap<br/>Fondateurs]
-    P1 --> REV1[Premiers<br/>Revenus]
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    P1[Phase 1<br/>Bootstrap] --> P2[Phase 2<br/>Croissance]
+    P2 --> P3[Phase 3<br/>Financement]
     
-    P2[Phase 2: Expansion<br/>Mois 10-18] --> REV2[Croissance<br/>Organique]
-    P2 --> BS2[Réinvestissement<br/>Profits]
+    P1 --> P1F[💰<br/>Fondateurs<br/>+ Revenus]
+    P2 --> P2F[📈<br/>Réinvestissement<br/>Profits]
+    P3 --> P3F[💰<br/>Angels +<br/>IQ]
     
-    P3[Phase 3: Plateforme<br/>Mois 19-30] --> F1[Revenue-Based<br/>Financing]
-    P3 --> F2[Investissement<br/>Québec]
-    P3 --> F3[Angels<br/>Québécois]
+    classDef phase1 fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef phase2 fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
+    classDef phase3 fill:#FCE4EC,stroke:#C2185B,color:#880E4F,font-size:14px
+    classDef funding fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C,font-size:14px
     
-    BS1 --> P2
-    REV1 --> P2
-    REV2 --> P3
-    BS2 --> P3
-    
-    class BS1,BS2 bootstrap
-    class REV1,REV2 revenue
-    class F1,F2,F3 funding
+    class P1 phase1
+    class P2 phase2
+    class P3 phase3
+    class P1F,P2F,P3F funding
 ```
+
+**Stratégie de financement par phases :**
+- **Phase 1** : Bootstrap fondateurs + premiers revenus (1K$ MRR)
+- **Phase 2** : Réinvestissement profits organiques (9K$ MRR)
+- **Phase 3** : Financement stratégique Angels + Investissement Québec (40K$ MRR)
 
 Pour les détails financiers complets, voir la section Financial Model dans les documents de phase spécifiques.
 
@@ -411,6 +378,6 @@ Les documents détaillés par phase fournissent les spécifications précises po
 ---
 
 *Document maître - Version 1.0*  
-*Dernière révision : Juillet 2025*  
+*Dernière révision : Juillet 2024*  
 *Prochaine révision : Après 20 customer interviews*  
 *Contact : equipe@a3e.ca*

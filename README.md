@@ -29,7 +29,8 @@ project/
 ├── 4_technical_architecture/  # Architecture technique et stack
 ├── 5_market_research/         # Recherche de marché et données
 ├── 6_product_specifications/  # Spécifications produit (PRD)
-└── 7_financement/            # Documentation financement
+├── 7_financement/            # Documentation financement
+└── 8_implementation_roadmap/ # Roadmap d'implémentation
 ```
 
 ## 🎯 **ACCÈS RAPIDE SECTIONS CRITIQUES**
@@ -155,7 +156,7 @@ project/
 Comprendre notre modèle d'affaires en 9 blocks:
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f8f9fa', 'lineColor': '#6c757d'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph LR
     A[👥 Customer Segments] --> B[✨ Value Propositions]
     B --> C[📢 Channels]
@@ -194,19 +195,19 @@ graph LR
 ## 💰 Modèle Économique SaaS B2G
 
 **Phase 1 (MVP)** : Pricing d'acquisition
-- **🎯 Design Partners** : 100$/mois (50% rabais à vie)
-- **🚀 Early Adopters** : 150$/mois
+- **🎯 Design Partners** : 100$/org/mois + 50$/utilisateur additionnel (50% rabais à vie)
+- **🚀 Early Adopters** : 150$/org/mois + 60$/utilisateur additionnel
 
 **Phase 2+ (Scaling)** : Pricing mature
-- **🥉 STANDARD** : 200$/mois (Petites municipalités)
-- **🥈 PROFESSIONAL** : 500$/mois (Municipalités moyennes, CSS)
-- **🥇 ENTERPRISE** : Custom (Grandes villes, CIUSSS)
+- **🥉 STANDARD** : 200$/org/mois + 75$/utilisateur additionnel (Petites municipalités)
+- **🥈 PROFESSIONAL** : 500$/org/mois + 100$/utilisateur additionnel (Municipalités moyennes, CSS)
+- **🥇 ENTERPRISE** : Custom pricing + volume discounts (Grandes villes, CIUSSS)
 
 ## 🎯 Métriques Clés Bootstrap
 
-- **Phase 1 (Mois 9)** : 10 clients, 1,000$ MRR
-- **Phase 2 (Mois 18)** : 50 clients, 9,000$ MRR (108K$ ARR)
-- **Phase 3 (Mois 30)** : 200 clients, 40,000$ MRR (480K$ ARR)
+- **Phase 1 (Mois 9)** : 10 clients, 2,000$ MRR (24K$ ARR)
+- **Phase 2 (Mois 18)** : 50 clients, 17,500$ MRR (210K$ ARR)
+- **Phase 3 (Mois 30)** : 200 clients, 70,000$ MRR (840K$ ARR)
 - **Série A** : 2-5M$ pour expansion canadienne
 
 ---
@@ -215,11 +216,11 @@ graph LR
 
 | **Terme** | **Définition** | **Usage dans le Projet** |
 |-----------|----------------|---------------------------|
-| **Design Partners** | 5-10 premiers clients payants avec rabais 50% à vie | Phase 1 MVP : 100$/mois, accès direct fondateurs |
-| **Early Adopters** | 10-20 clients suivants avec pricing privilégié | Phase 1 MVP : 150$/mois, onboarding inclus |
+| **Design Partners** | 5-10 premiers clients payants avec rabais 50% à vie | Phase 1 MVP : 100$/org + 50$/user, accès direct fondateurs |
+| **Early Adopters** | 10-20 clients suivants avec pricing privilégié | Phase 1 MVP : 150$/org + 60$/user, onboarding inclus |
 | **Customer Discovery** | Processus validation hypothèses via interviews clients | Phase 0 : 20+ interviews pour valider problem-solution fit |
 | **Loi 25** | Loi québécoise protection renseignements personnels | Avantage concurrentiel : données hébergées Canada obligatoire |
-| **MRR** | Monthly Recurring Revenue (revenus récurrents mensuels) | Métrique principale : 1K$ → 9K$ → 40K$ par phase |
+| **MRR** | Monthly Recurring Revenue (revenus récurrents mensuels) | Métrique principale : 2K$ → 17.5K$ → 70K$ par phase |
 | **MVP** | Minimum Viable Product (produit viable minimum) | Phase 1 : 4 modules core, 10 clients, 3-9 mois |
 | **NPS** | Net Promoter Score (score satisfaction client) | Cible évolutive : 40 → 60 → 80 selon phase |
 | **PLN/CON/CONS/MAINT** | Codes modules : Planification/Conception/Construction/Maintenance | Référence features : PLN-001, CON-002, etc. |
@@ -257,5 +258,5 @@ Ce projet est **strictement confidentiel**. Toute la documentation contient des 
 
 ---
 
-*Dernière mise à jour : Juillet 2025*  
+*Dernière mise à jour : Juillet 2024*  
 *Créé avec ❤️ pour révolutionner la gestion de construction au Québec*

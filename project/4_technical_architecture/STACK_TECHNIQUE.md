@@ -1,9 +1,9 @@
 # 🛠️ STACK TECHNIQUE - PLATEFORME DE GESTION CONSTRUCTION QUÉBEC
 
 > **Document d'architecture technique** - Aligné avec la vision produit et roadmap stratégique  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Méthodologie**: Architecture cloud-native, microservices, IA avancée  
-> **Dernière mise à jour**: Août 2025
+> **Dernière mise à jour**: Août 2024
 
 📚 **[← Retour au README](../../README.md)** | **[→ PRD Master](../6_product_specifications/PRD_MASTER.md)** | **[→ Analyse Concurrentielle](../2_competitive_analysis/ANALYSE_CONCURRENTIELLE_STRATEGIQUE.md)**
 
@@ -13,8 +13,19 @@
 
 ⚙️ **Liens connexes**: [→ PRD Features Techniques](../6_product_specifications/PRD_MASTER.md#features) | [→ BMC Key Resources](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md#key-resources)
 
-L'architecture de la plateforme est conçue pour être modulaire, évolutive et hautement performante, tout en respectant les contraintes réglementaires québécoises (Loi 25) et e23. **Documentation OpenTelemetry**: [opentelemetry.io/docs](https://opentelemetry.io/docs/)
-24. **Documentation Azure DevOps**: [learn.microsoft.com/en-us/azure/devops/?view=azure-devops](https://learn.microsoft.com/en-us/azure/devops/?view=azure-devops)
+L'architecture de la plateforme est conçue pour être modulaire, évolutive et hautement performante, tout en respectant les contraintes réglementaires québécoises (Loi 25).
+
+### **🚀 Évolution Architecture : MVP → Production**
+
+**Phase 1 - MVP (Mois 3-9)** : Supabase + NextJS
+- Architecture monolithique simple avec Supabase (PostgreSQL + Auth + Storage)
+- Livraison rapide en 16 semaines
+- Row Level Security (RLS) pour multi-tenant basique
+
+**Phase 2+ - Production (Mois 10+)** : Migration Progressive Microservices  
+- Décomposition progressive vers microservices selon charge
+- Conservation Supabase pour services non-critiques
+- Migration selective vers PostgreSQL + NestJS pour services haute charge
 
 ---
 
@@ -54,8 +65,8 @@ Cette documentation technique a été simplifiée selon les principes suivants:
 ---
 
 *Document technique vivant - À réviser trimestriellement*  
-*Dernière mise à jour : Août 2025*  
-*Prochain audit d'architecture : Octobre 2025*sant les coûts d'opération.
+*Dernière mise à jour : Août 2024*  
+*Prochain audit d'architecture : Octobre 2024*sant les coûts d'opération.
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
@@ -840,7 +851,7 @@ graph LR
 - **Phase 2** : 50 clients, 9K$ MRR → Architecture scalable pour croissance
 - **Phase 3** : 200+ clients, 40K$ MRR → Plateforme enterprise avec IA avancée
 
-### **Phase 1: MVP (Mois 1-9) - Bootstrap Technique**
+### **Phase 1: MVP (Mois 3-9) - Bootstrap Technique**
 
 ```yaml
 Objectif Business: 10 clients payants, 1,000$ MRR
@@ -1048,5 +1059,5 @@ Pour les détails d'implémentation spécifiques, référez-vous aux documents c
 ---
 
 *Document technique vivant - À réviser trimestriellement*  
-*Dernière mise à jour : Août 2025*  
-*Prochain audit d'architecture : Octobre 2025*
+*Dernière mise à jour : Août 2024*  
+*Prochain audit d'architecture : Octobre 2024*

@@ -1,8 +1,8 @@
 # Analyse Concurrentielle Stratégique
 ## Nos Chances Réelles Contre les Géants Procore et Autodesk Construction Cloud
 
-> **Document stratégique** - Analyse basée sur recherches approfondies 2024-2025  
-> **Date**: Juillet 2025  
+> **Document stratégique** - Analyse basée sur recherches approfondies 2024-2024  
+> **Date**: Juillet 2024  
 > **Confidentiel**: Usage interne uniquement
 
 📚 **[← Retour README](../../README.md)** | **[→ Business Model Canvas](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ Stack Technique](../4_technical_architecture/STACK_TECHNIQUE.md)**
@@ -91,7 +91,7 @@ Notre analyse révèle que malgré la domination apparente de Procore et Autodes
 - **1 100+ Municipalités**
 - **Déficit d'entretien SQI : 1 milliard $**
 - **Budget TECQ 2024-2028 : 3,3 milliards $**
-- **CSS entretien actifs : 420 millions $ (2024-2025)**
+- **CSS entretien actifs : 420 millions $ (2024-2024)**
 
 #### Fragmentation Totale Actuelle
 - 95% utilisent solutions maison (Excel, email)
@@ -205,7 +205,7 @@ pour les défis UNIQUES du Québec"
 
 ## 🎯 **FACTEURS CRITIQUES DE SUCCÈS**
 
-### **1. Timing Parfait (2024-2025)**
+### **1. Timing Parfait (2024-2024)**
 - **Post-pandémie** : Transformation digitale = priorité absolue
 - **Budgets massifs** : Plus gros investissements infrastructure histoire QC
 - **Génération millennial** : Gestionnaires techno-friendly aux commandes
@@ -213,7 +213,7 @@ pour les défis UNIQUES du Québec"
 
 ### **2. Stratégie "Cheval de Troie"**
 
-#### Phase 1 : Validation (Mois 1-9)
+#### Phase 1 : MVP (Mois 3-9)
 - **5 organismes pilotes** : 1 municipalité, 1 CSS, 1 organisme provincial
 - **Preuves concept irréfutables** : ROI documenté, témoignages
 - **Références stratégiques** : Validation par pairs gouvernementaux
@@ -344,4 +344,4 @@ Une fois 20+ clients gouvernementaux acquis :
 ---
 
 *Document confidentiel - Usage interne uniquement*  
-*Dernière mise à jour : Juillet 2025*
+*Dernière mise à jour : Juillet 2024*

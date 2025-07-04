@@ -2,7 +2,7 @@
 ## Product Requirements Document - Validation et MVP (Mois 1-9)
 
 > **Document produit officiel** - Spécifications Phase 1: Validation et MVP  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Version**: 1.0  
 > **Équipe**: Fondateurs + Développement
 
@@ -13,7 +13,7 @@
 Cette PRD est divisée en plusieurs documents pour une meilleure lisibilité et gestion:
 
 1. [**PRD_MASTER**](./PRD_MASTER.md) - Vue d'ensemble, stratégie et analyse de marché
-2. [**PRD_PHASE1_MVP**](./PRD_PHASE1_MVP.md) - Validation et MVP (Mois 1-9) (ce document)
+2. [**PRD_PHASE1_MVP**](./PRD_PHASE1_MVP.md) - Validation et MVP (Mois 3-9) (ce document)
 3. [**PRD_PHASE2_EXPANSION**](./PRD_PHASE2_EXPANSION.md) - Expansion et croissance (Mois 10-18)
 4. [**PRD_PHASE3_PLATFORM**](./PRD_PHASE3_PLATFORM.md) - Plateforme mature et scaling (Mois 19-30)
 
@@ -21,7 +21,7 @@ Cette PRD est divisée en plusieurs documents pour une meilleure lisibilité et 
 
 ## 🎯 **OBJECTIFS DE LA PHASE 1**
 
-La Phase 1 (Mois 1-9) a pour objectifs principaux:
+La Phase 1 (Mois 3-9) a pour objectifs principaux:
 
 1. **Valider** les hypothèses de marché via customer discovery
 2. **Développer** un MVP ultra-minimal mais complet sur les 4 modules
@@ -30,33 +30,52 @@ La Phase 1 (Mois 1-9) a pour objectifs principaux:
 5. **Établir** product-market fit initial
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph LR
-    classDef validate fill:#42A5F5,stroke:#1976D2,color:white
-    classDef build fill:#66BB6A,stroke:#388E3C,color:white
-    classDef acquire fill:#FFA726,stroke:#F57C00,color:white
-    classDef growth fill:#EC407A,stroke:#D81B60,color:white
+    V[🔬<br/>Valider<br/>Hypothèses] --> B[🔨<br/>Développer<br/>MVP]
+    B --> A[🎯<br/>Acquérir<br/>Design Partners]
+    A --> G[💰<br/>Générer<br/>1,000$ MRR]
+    
+    classDef validate fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:14px
+    classDef build fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef acquire fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
+    classDef growth fill:#FCE4EC,stroke:#C2185B,color:#880E4F,font-size:14px
+    
+    class V validate
+    class B build
+    class A acquire
+    class G growth
+```
 
-    V[Valider<br/>Hypothèses] --> B[Développer<br/>MVP]
-    B --> A[Acquérir<br/>Design Partners]
-    A --> G[Générer<br/>1,000$ MRR]
+### **Customer Discovery Flow**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph TD
+    Start[📋<br/>20 Interviews<br/>Planifiées] --> Problem[❓<br/>Problem<br/>Validation]
+    Problem --> Solution[💡<br/>Solution<br/>Validation]
+    Solution --> Pricing[💰<br/>Pricing<br/>Validation]
     
-    V1[Customer<br/>Discovery] --> V
-    V2[Prototype<br/>Figma] --> V
+    Problem --> P85[85%+ confirment<br/>problème critique]
+    Solution --> S70[70%+ intéressés<br/>par solution]
+    Pricing --> PR70[70%+ acceptent<br/>200$/mois]
     
-    B1[Core<br/>Features] --> B
-    B2[Mobile<br/>First] --> B
+    P85 --> Decision{Go/No-Go<br/>Decision}
+    S70 --> Decision
+    PR70 --> Decision
     
-    A1[Outreach<br/>Direct] --> A
-    A2[Design Partners<br/>Program] --> A
+    Decision -->|✅ GO| MVP[🚀<br/>Start MVP<br/>Development]
+    Decision -->|❌ NO-GO| Pivot[🔄<br/>Pivot<br/>Strategy]
     
-    G1[Pricing<br/>Strategy] --> G
-    G2[Onboarding<br/>Excellence] --> G
+    classDef process fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:14px
+    classDef metric fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef decision fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
+    classDef outcome fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C,font-size:14px
     
-    class V,V1,V2 validate
-    class B,B1,B2 build
-    class A,A1,A2 acquire
-    class G,G1,G2 growth
+    class Start,Problem,Solution,Pricing process
+    class P85,S70,PR70 metric
+    class Decision decision
+    class MVP,Pivot outcome
 ```
 
 ---
@@ -112,21 +131,49 @@ gantt
     axisFormat  %d-%m
     
     section Mois 1
-    Customer Discovery       :a1, 2025-07-01, 14d
-    Analyse Concurrentielle  :a2, 2025-07-01, 14d
-    Prototype Figma          :a3, 2025-07-15, 14d
-    Landing Page             :a4, 2025-07-15, 14d
-    Design Partners Outreach :a5, 2025-07-01, 30d
+    Customer Discovery       :a1, 2024-07-01, 14d
+    Analyse Concurrentielle  :a2, 2024-07-01, 14d
+    Prototype Figma          :a3, 2024-07-15, 14d
+    Landing Page             :a4, 2024-07-15, 14d
+    Design Partners Outreach :a5, 2024-07-01, 30d
     
     section Mois 2
-    Setup Tech               :b1, 2025-08-01, 14d
-    Architecture Base        :b2, 2025-08-01, 14d
-    Auth & Permissions       :b3, 2025-08-15, 14d
-    Module Planification     :b4, 2025-08-15, 14d
-    Tests Alpha              :b5, 2025-08-20, 10d
+    Setup Tech               :b1, 2024-08-01, 14d
+    Architecture Base        :b2, 2024-08-01, 14d
+    Auth & Permissions       :b3, 2024-08-15, 14d
+    Module Planification     :b4, 2024-08-15, 14d
+    Tests Alpha              :b5, 2024-08-20, 10d
 ```
 
-### **Phase 1: MVP (Mois 3-9)**
+### **Feature Dependency Map**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph TD
+    TRANS001[🔐<br/>TRANS-001<br/>Auth & Sécurité] --> PLN001[📊<br/>PLN-001<br/>Dashboard]
+    TRANS001 --> CON001[📁<br/>CON-001<br/>Documents]
+    TRANS001 --> CONS001[📱<br/>CONS-001<br/>Mobile]
+    TRANS001 --> MAINT001[🔧<br/>MAINT-001<br/>Actifs]
+    
+    PLN001 --> PLN002[📋<br/>PLN-002<br/>Projets]
+    PLN002 --> PLN003[💰<br/>PLN-003<br/>Budgets]
+    
+    CON001 --> CON002[💬<br/>CON-002<br/>Commentaires]
+    
+    CONS001 --> CONS002[📸<br/>CONS-002<br/>Photos]
+    
+    MAINT001 --> MAINT002[📅<br/>MAINT-002<br/>Inspections]
+    
+    classDef foundation fill:#FFCDD2,stroke:#D32F2F,color:#B71C1C,font-size:12px
+    classDef core fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:12px
+    classDef advanced fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:12px
+    
+    class TRANS001 foundation
+    class PLN001,CON001,CONS001,MAINT001 core
+    class PLN002,PLN003,CON002,CONS002,MAINT002 advanced
+```
+
+### **Phase 1: MVP (Mois 3-9)** - Aligné timeline globale
 
 #### **Mois 3-4: Core Foundation**
 ```yaml
@@ -585,7 +632,7 @@ Authentification:
 
 ```yaml
 Offre spéciale premiers clients:
-  - 50% rabais à vie (100$/mois vs 200$)
+  - 50% rabais à vie (100$/org/mois + 50$/user vs 200$/org + 75$/user)
   - Accès direct fondateurs
   - Features sur mesure prioritaires
   - Logo sur site (early adopters)
@@ -755,14 +802,14 @@ Runway: 9 mois = ~6,500$ investissement total
 ```yaml
 Break-even point:
   - Coût mensuel: ~725$
-  - Prix client: 100$/mois
-  - Clients nécessaires: 8
-  - Atteint: Mois 8
+  - Prix client: 200$ ARPU (100$ + 2×50$)
+  - Clients nécessaires: 4
+  - Atteint: Mois 6
   
 ROI Phase 1:
   - Investissement total: ~6,500$
-  - MRR fin phase: 1,000$
-  - Payback period: 6.5 mois post-phase
+  - MRR fin phase: 2,000$
+  - Payback period: 3.5 mois post-phase
 ```
 
 ---
@@ -780,7 +827,7 @@ Product Criteria:
   
 Business Criteria:
   - 10+ clients actifs
-  - 1,000$+ MRR
+  - 2,000$+ MRR
   - <10% churn mensuel
   - Pipeline >20 prospects
   
@@ -815,6 +862,6 @@ Pour plus de détails sur la Phase 2, voir [PRD_PHASE2_EXPANSION.md](./PRD_PHASE
 ---
 
 *Document Phase 1: MVP - Version 1.0*  
-*Dernière révision : Juillet 2025*  
+*Dernière révision : Juillet 2024*  
 *Prochaine révision : Après 20 customer interviews*  
 *Contact : equipe@a3e.ca*

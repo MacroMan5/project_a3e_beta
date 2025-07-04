@@ -2,7 +2,7 @@
 ## Plateforme Construction Publique Québec
 
 > **Document stratégique** - Modèle d'affaires et proposition de valeur  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Aligné avec**: [PROJECT_OVERVIEW.md](../1_business_foundation/PROJECT_OVERVIEW.md)  
 > **Status**: Version 1.0
 
@@ -15,47 +15,46 @@
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph TD
-    subgraph BMC ["🏗️ BUSINESS MODEL CANVAS A3E"]
-        VP["💎 PROPOSITION DE VALEUR<br/>• Dashboard 360° multi-projets<br/>• IA spécialisée construction<br/>• Mobile-first & hors-ligne<br/>• Conformité Loi 25 native<br/>• Prix 5x moins cher<br/>• Support français <4h"]
+    subgraph "🏗️ BUSINESS MODEL CANVAS A3E"
+        subgraph " "
+            KP[🤝<br/>Partenaires<br/>Clés] 
+            KA[🎯<br/>Activités<br/>Clés]
+            KR[🏢<br/>Ressources<br/>Clés]
+        end
         
-        CS["👥 SEGMENTS CLIENTS<br/>• Municipalités (1,100+)<br/>• Centres services scolaires (72)<br/>• Établissements santé (34)<br/>• Sociétés d'État (200+)"]
+        VP[💎<br/>Proposition<br/>de Valeur]
         
-        CH["📱 CANAUX<br/>• SEAO<br/>• Associations sectorielles<br/>• Événements B2G<br/>• Partenaires prescripteurs<br/>• Marketing digital ciblé"]
+        subgraph "  "
+            CR[💝<br/>Relations<br/>Clients]
+            CH[📱<br/>Canaux]
+        end
         
-        CR["💝 RELATIONS CLIENTS<br/>• CSM dédié<br/>• Support français<br/>• Formation incluse<br/>• Communauté utilisateurs"]
+        CS[👥<br/>Segments<br/>Clients]
         
-        KP["🤝 PARTENAIRES CLÉS<br/>• SEAO & Gouvernement<br/>• Régie Bâtiment Québec<br/>• OVHcloud (Loi 25)<br/>• Associations sectorielles"]
-        
-        KA["🎯 ACTIVITÉS CLÉS<br/>• Développement plateforme<br/>• IA spécialisée<br/>• Support client<br/>• Conformité Loi 25"]
-        
-        KR["🏢 RESSOURCES CLÉS<br/>• Équipe tech québécoise<br/>• IA/RAG construction<br/>• Cloud souverain<br/>• Capital bootstrap"]
-        
-        RS["💰 REVENUS<br/>• SaaS évolutif : 100$→500$/mois<br/>• Design Partners : 100$/mois<br/>• Standard/Pro : 200-500$/mois<br/>• Services additionnels<br/>• TAM: 50M$/an"]
-        
-        CS2["💸 COÛTS<br/>• Personnel (40%)<br/>• Infrastructure (15%)<br/>• R&D/IA (20%)<br/>• Marketing (15%)<br/>• Compliance (10%)"]
+        subgraph "   "
+            CS2[💸<br/>Structure<br/>Coûts]
+            RS[💰<br/>Sources<br/>Revenus]
+        end
     end
     
-    VP --- CS
-    VP --- CH
-    VP --- CR
-    KP --- VP
-    KA --- VP
-    KR --- VP
-    CS2 --- VP
-    RS --- VP
+    KP -.-> VP
+    KA -.-> VP
+    KR -.-> VP
+    VP -.-> CR
+    VP -.-> CH
+    VP -.-> CS
+    CS2 -.-> RS
     
-    %% Définition des classes
-    classDef value fill:#e8f5e8,stroke:#388e3c,color:#000,font-size:14px
-    classDef clients fill:#e0f2f1,stroke:#00796b,color:#000,font-size:14px
-    classDef channels fill:#f1f8e9,stroke:#689f38,color:#000,font-size:14px
-    classDef relations fill:#fce4ec,stroke:#c2185b,color:#000,font-size:14px
-    classDef partners fill:#e3f2fd,stroke:#1976d2,color:#000,font-size:14px
-    classDef activities fill:#f3e5f5,stroke:#7b1fa2,color:#000,font-size:14px
-    classDef resources fill:#fff3e0,stroke:#f57c00,color:#000,font-size:14px
-    classDef revenue fill:#e8eaf6,stroke:#3f51b5,color:#000,font-size:14px
-    classDef costs fill:#fff8e1,stroke:#fbc02d,color:#000,font-size:14px
+    classDef value fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef clients fill:#E0F2F1,stroke:#00695C,color:#004D40,font-size:14px
+    classDef channels fill:#F1F8E9,stroke:#558B2F,color:#33691E,font-size:14px
+    classDef relations fill:#FCE4EC,stroke:#C2185B,color:#880E4F,font-size:14px
+    classDef partners fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:14px
+    classDef activities fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C,font-size:14px
+    classDef resources fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
+    classDef revenue fill:#E8EAF6,stroke:#3F51B5,color:#1A237E,font-size:14px
+    classDef costs fill:#FFF8E1,stroke:#F9A825,color:#F57F17,font-size:14px
     
-    %% Application des classes
     class VP value
     class CS clients
     class CH channels
@@ -67,8 +66,16 @@ graph TD
     class CS2 costs
 ```
 
-> **Légende**: Ce Business Model Canvas présente les 9 composantes clés du modèle d'affaires d'A3E, centré sur une proposition de valeur adaptée au marché québécois et un modèle de revenus SaaS par abonnement mensuel à trois niveaux.
-```
+### **Composantes du Business Model Canvas :**
+- **💎 Proposition de Valeur** : Dashboard 360°, IA construction, mobile-first, Loi 25, prix 5x moins cher
+- **👥 Segments Clients** : Municipalités (1,100+), CSS (72), CIUSSS (34), Sociétés d'État (200+)
+- **📱 Canaux** : SEAO, associations sectorielles, événements B2G, partenaires prescripteurs
+- **💝 Relations Clients** : CSM dédié, support français, formation incluse, communauté
+- **🤝 Partenaires Clés** : SEAO, RBQ, OVHcloud, associations sectorielles
+- **🎯 Activités Clés** : Développement plateforme, IA spécialisée, support client, conformité
+- **🏢 Ressources Clés** : Équipe tech québécoise, IA/RAG, cloud souverain, capital bootstrap
+- **💰 Sources Revenus** : SaaS 100-500$/mois, services additionnels, TAM 50M$/an
+- **💸 Structure Coûts** : Personnel (40%), R&D/IA (20%), Infrastructure (15%), Marketing (15%), Compliance (10%)
 
 ---
 
@@ -156,18 +163,18 @@ graph TD
 
 ### **Stratégie Pricing Évolutive**
 
-**Phase 1 (MVP - Mois 1-9) : Pricing d'Acquisition**
+**Phase 1 (MVP - Mois 3-9) : Pricing d'Acquisition**
 | **Tier** | **Prix** | **Cible** | **Inclus** |
 |----------|----------|-----------|------------|
-| 🎯 **Design Partners** | 100$/mois | 5-10 premiers clients | 50% rabais à vie, accès direct fondateurs |
-| 🚀 **Early Adopters** | 150$/mois | 10-20 clients suivants | Onboarding inclus, support prioritaire |
+| 🎯 **Design Partners** | 100$/org/mois + 50$/user | 5-10 premiers clients | 50% rabais à vie, accès direct fondateurs |
+| 🚀 **Early Adopters** | 150$/org/mois + 60$/user | 10-20 clients suivants | Onboarding inclus, support prioritaire |
 
 **Phase 2-3 (Scaling - Mois 10+) : Pricing Mature**
 | **Tier** | **Prix** | **Cible** | **Inclus** |
 |----------|----------|-----------|------------|
-| 🥉 **STANDARD** | 200$/mois | Petites municipalités (<20k habitants) | Modules core, support standard |
-| 🥈 **PROFESSIONAL** | 500$/mois | Municipalités moyennes, CSS | Tous modules, intégrations, IA |
-| 🥇 **ENTERPRISE** | Custom | Grandes villes, CIUSSS | Modules avancés, account manager dédié |
+| 🥉 **STANDARD** | 200$/org/mois + 75$/user | Petites municipalités (<20k habitants) | Modules core, support standard |
+| 🥈 **PROFESSIONAL** | 500$/org/mois + 100$/user | Municipalités moyennes, CSS | Tous modules, intégrations, IA |
+| 🥇 **ENTERPRISE** | Custom pricing + volume discounts | Grandes villes, CIUSSS | Modules avancés, account manager dédié |
 
 **Services additionnels:**
 - Formation équipes: 1,500$/jour
@@ -175,15 +182,15 @@ graph TD
 - Customisation: 200$/h
 - Consulting: 250$/h
 
-**Projections revenus cohérentes:**
-- **Phase 1 (Mois 9)** : 10 clients × 100$ = 1,000$ MRR
-- **Phase 2 (Mois 18)** : 50 clients × 180$ ARPU = 9,000$ MRR  
-- **Phase 3 (Mois 30)** : 200 clients × 200$ ARPU = 40,000$ MRR
+**Projections revenus cohérentes (base 3 utilisateurs/org):**
+- **Phase 1 (Mois 9)** : 10 clients × 200$ ARPU (100$ + 2×50$) = 2,000$ MRR
+- **Phase 2 (Mois 18)** : 50 clients × 350$ ARPU (200$ + 2×75$) = 17,500$ MRR  
+- **Phase 3 (Mois 30)** : 200 clients × 350$ ARPU (200$ + 2×75$) = 70,000$ MRR
 
 ### **Pricing vs Concurrents**
 | Métrique | A3E Standard | A3E Professional | Procore | Autodesk |
 |----------|--------------|------------------|---------|----------|
-| **Prix entry-level** | 200$/mois | 500$/mois | 1,000$/mois | 1,200$/mois |
+| **Prix entry-level** | 200$/org + 75$/user | 500$/org + 100$/user | 1,000$/mois flat | 1,200$/mois flat |
 | **Formation** | Incluse | Incluse | 5,000$ | 8,000$ |
 | **Support** | Français <4h | Français <2h | Anglais 48h | Anglais 72h |
 | **ROI typique** | 6 mois | 4 mois | 2-3 ans | 3+ ans |
@@ -262,12 +269,12 @@ graph TD
 
 ### **Product-Market Fit Metrics**
 - **Retention Rate**: >80% après 12 mois (vs 60% industrie)
-- **NPS Score**: >60 (obsession customer satisfaction)
+- **NPS Score**: >40 (Phase 1), >50 (Phase 2), >60 (Phase 3)
 - **Time-to-Value**: <30 jours (vs 6+ mois concurrents)
 - **Usage Weekly**: >3 sessions/semaine utilisateurs clés
 
 ### **Business Metrics**
-- **CAC (Customer Acquisition Cost)**: <8,000$ (vs 25,000$+ B2B traditionnel)
+- **CAC (Customer Acquisition Cost)**: <500$ (vs 25,000$+ B2B traditionnel)
 - **LTV/CAC Ratio**: >5:1 (sustainable growth)
 - **Churn Rate**: <5% annuel (secteur public stable)
 - **Expansion Revenue**: 120%+ (upsell modules)
@@ -310,7 +317,7 @@ graph TD
 ## 📈 **PROJECTIONS FINANCIÈRES**
 
 ### **Runway Bootstrap 18-24 mois**
-```
+
 Année 1: 
 - Clients: 3 municipalités pilotes
 - Revenus: 180K$
@@ -328,7 +335,7 @@ Année 3:
 - Revenus: 2.4M$
 - Profit: 1.2M$ (50% margin)
 - Série A: 2-5M$ pour expansion
-```
+
 
 ---
 
@@ -379,4 +386,4 @@ Ce document a été simplifié selon les principes suivants:
 ---
 
 *Document vivant - À réviser après chaque cycle de validation*  
-*Dernière mise à jour : Juillet 2025*
+*Dernière mise à jour : Juillet 2024*

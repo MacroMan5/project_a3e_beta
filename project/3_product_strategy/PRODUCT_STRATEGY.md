@@ -2,11 +2,11 @@
 ## Plateforme de Gestion de Construction Québec
 
 > **Document stratégique** - Vision, positionnement et stratégie go-to-market  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Version**: 1.0  
 > **Équipe**: Fondateurs + Développement
 
-📚 **[← Retour README](../../README.md)** | **[→ Business Model Canvas](BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ Spécifications Produit](../5_product_specifications/PRD_MASTER.md)**
+📚 **[← Retour README](../../README.md)** | **[→ Business Model Canvas](BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ Spécifications Produit](../6_product_specifications/PRD_MASTER.md)**
 
 ---
 
@@ -18,8 +18,8 @@ Cette stratégie produit s'articule avec les autres documents :
 2. [**Competitive Analysis**](../2_competitive_analysis/ANALYSE_CONCURRENTIELLE_STRATEGIQUE.md) - Analyse du marché
 3. [**Product Strategy**](./PRODUCT_STRATEGY.md) - Stratégie produit (ce document)
 4. [**Technical Architecture**](../4_technical_architecture/STACK_TECHNIQUE.md) - Architecture technique
-5. [**Product Specifications**](../5_product_specifications/PRD_MASTER.md) - Spécifications détaillées
-6. [**Implementation Roadmap**](../6_implementation_roadmap/ROADMAP_STRATEGIQUE_BOOTSTRAP.md) - Planning d'exécution
+5. [**Product Specifications**](../6_product_specifications/PRD_MASTER.md) - Spécifications détaillées
+6. [**Implementation Roadmap**](../8_implementation_roadmap/ROADMAP_STRATEGIQUE_BOOTSTRAP.md) - Planning d'exécution
 
 ---
 
@@ -81,48 +81,83 @@ Plateforme **tout-en-un** québécoise avec:
 - 🔗 **Intégrations natives** SEAO, Hydro-Québec, systèmes gouvernementaux
 - 🛡️ **Conformité Loi 25** garantie par design
 
-### **Architecture du Produit**
+### **Architecture Globale de la Plateforme**
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph TD
-    classDef plan fill:#42A5F5,stroke:#1976D2,color:white
-    classDef concept fill:#66BB6A,stroke:#388E3C,color:white
-    classDef construct fill:#FF9800,stroke:#F57C00,color:white
-    classDef maintain fill:#E91E63,stroke:#C2185B,color:white
-    classDef transverse fill:#7E57C2,stroke:#5E35B1,color:white
+    A3E[A3E Beta<br/>Plateforme] --> PLN[Planification]
+    A3E --> CON[Conception]
+    A3E --> CONS[Construction]
+    A3E --> MAINT[Maintenance]
+    
+    classDef plan fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:16px
+    classDef concept fill:#E0F2F1,stroke:#00695C,color:#004D40,font-size:16px
+    classDef construct fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:16px
+    classDef maintain fill:#FCE4EC,stroke:#C2185B,color:#880E4F,font-size:16px
+    classDef platform fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:18px
+    
+    class A3E platform
+    class PLN plan
+    class CON concept
+    class CONS construct
+    class MAINT maintain
+```
 
-    App[A3E Beta<br/>Plateforme] --> PLN[Module<br/>Planification]
-    App --> CON[Module<br/>Conception]
-    App --> CONS[Module<br/>Construction]
-    App --> MAINT[Module<br/>Maintenance]
-    App --> TRANS[Fonctionnalités<br/>Transversales]
+### **Service Planification (PLN)**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    PLN[Planification] --> PLN001[Dashboard<br/>Parc]
+    PLN --> PLN002[Projets<br/>& Statuts]
+    PLN --> PLN003[Budgets<br/>& Allocations]
     
-    PLN --> PLN1[Dashboard<br/>Parc Immobilier]
-    PLN --> PLN2[Liste Projets<br/>avec Statuts]
-    PLN --> PLN3[Budgets et<br/>Allocations]
+    classDef plan fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
     
-    CON --> CON1[Gestion<br/>Documentaire]
-    CON --> CON2[Commentaires<br/>Annotations]
-    CON --> CON3[PFT et<br/>Fiches Locaux]
+    class PLN,PLN001,PLN002,PLN003 plan
+```
+
+### **Service Conception (CON)**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    CON[Conception] --> CON001[Gestion<br/>Documents]
+    CON --> CON002[Commentaires<br/>& Annotations]
+    CON --> CON003[PFT<br/>& Fiches]
     
-    CONS --> CONS1[Rapports<br/>Visite Mobile]
-    CONS --> CONS2[Gestion<br/>Photos/Médias]
-    CONS --> CONS3[Suivi<br/>Progression]
+    classDef concept fill:#E0F2F1,stroke:#00695C,color:#004D40,font-size:14px
     
-    MAINT --> MAINT1[Inventaire<br/>Actifs]
-    MAINT --> MAINT2[Planification<br/>Inspections]
-    MAINT --> MAINT3[Historique<br/>Interventions]
+    class CON,CON001,CON002,CON003 concept
+```
+
+### **Service Construction (CONS)**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    CONS[Construction] --> CONS001[Rapports<br/>Mobile]
+    CONS --> CONS002[Photos<br/>& Médias]
+    CONS --> CONS003[Suivi<br/>Progression]
     
-    TRANS --> TRANS1[Auth et<br/>Sécurité]
-    TRANS --> TRANS2[Interface<br/>Responsive]
-    TRANS --> TRANS3[IA<br/>Conversationnelle]
+    classDef construct fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
     
-    class PLN,PLN1,PLN2,PLN3 plan
-    class CON,CON1,CON2,CON3 concept
-    class CONS,CONS1,CONS2,CONS3 construct
-    class MAINT,MAINT1,MAINT2,MAINT3 maintain
-    class TRANS,TRANS1,TRANS2,TRANS3 transverse
+    class CONS,CONS001,CONS002,CONS003 construct
+```
+
+### **Service Maintenance (MAINT)**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    MAINT[Maintenance] --> MAINT001[Inventaire<br/>Actifs]
+    MAINT --> MAINT002[Inspections<br/>Planifiées]
+    MAINT --> MAINT003[Historique<br/>Interventions]
+    
+    classDef maintain fill:#FCE4EC,stroke:#C2185B,color:#880E4F,font-size:14px
+    
+    class MAINT,MAINT001,MAINT002,MAINT003 maintain
 ```
 
 ### **Avantages Concurrentiels Défendables**
@@ -273,23 +308,25 @@ Message:
 ### **Pricing & Revenue Model**
 | Client Type | Prix mensuel | Engagement | Inclusions |
 |-------------|--------------|-----------|------------|
-| Design Partner | 100$ | 12 mois | Tous modules, support prioritaire |
-| Early Adopter | 150$ | 12 mois | Tous modules, onboarding inclus |
-| Mainstream | 200$ | 12 mois | Tous modules, support standard |
+| Design Partner | 100$/org + 50$/user | 12 mois | Tous modules, support prioritaire |
+| Early Adopter | 150$/org + 60$/user | 12 mois | Tous modules, onboarding inclus |
+| Standard | 200$/org + 75$/user | 12 mois | Tous modules, support standard |
+| Professional | 500$/org + 100$/user | 12 mois | Tous modules + analytics avancés |
+| Enterprise | Custom + volume discounts | 12+ mois | Plateforme complète + intégrations |
 
-### **Unit Economics**
-- **CAC (Customer Acquisition Cost)**: 200-600$ selon phase
-- **LTV (Customer Lifetime Value)**: 48,000$ (200$ × 12 × 20 ans)
-- **LTV/CAC Ratio**: 80-240x
-- **Payback Period**: 1-3 mois
+### **Unit Economics (base 3 utilisateurs/org)**
+- **CAC (Customer Acquisition Cost)**: 300-500$ selon phase
+- **LTV (Customer Lifetime Value)**: 84,000$ (350$ ARPU × 12 × 20 ans)
+- **LTV/CAC Ratio**: 168-280x
+- **Payback Period**: 1-2 mois
 
 ### **Revenue Projections**
 | Étape | Timing | Clients | ARPU | MRR | ARR |
 |-------|--------|---------|------|-----|-----|
-| Fin Phase 1 (MVP) | Mois 9 | 10 | 100$/mois | 1,000$ | 12,000$ |
-| Fin Phase 2 (Expansion) | Mois 18 | 50 | 180$/mois | 9,000$ | 108,000$ |
-| Fin Phase 3 (Platform) | Mois 30 | 200 | 200$/mois | 40,000$ | 480,000$ |
-| Post-Financement | Mois 36 | 500 | 220$/mois | 110,000$ | 1,320,000$ |
+| Fin Phase 1 (MVP) | Mois 9 | 10 | 200$/mois (100$+2×50$) | 2,000$ | 24,000$ |
+| Fin Phase 2 (Expansion) | Mois 18 | 50 | 350$/mois ARPU (200$+2×75$) | 17,500$ | 210,000$ |
+| Fin Phase 3 (Platform) | Mois 30 | 200 | 350$/mois | 70,000$ | 840,000$ |
+| Post-Financement | Mois 36 | 500 | 400$/mois | 200,000$ | 2,400,000$ |
 
 ---
 
@@ -333,9 +370,9 @@ Message:
 
 ### **North Star Metrics**
 - **Product-Market Fit Score** : >60% réponse "très déçus si disparaît"
-- **NPS Score** : >40 (Phase 1), >60 (Phase 3)
+- **NPS Score** : >40 (Phase 1), >50 (Phase 2), >60 (Phase 3)
 - **Monthly Recurring Revenue (MRR)** : Croissance >15% mensuelle
-- **Customer Acquisition Cost (CAC)** : <3 mois payback
+- **Customer Acquisition Cost (CAC)** : <500$ toutes phases
 - **Churn Rate** : <5% annuel
 
 ### **Métriques de Traction**
@@ -351,8 +388,8 @@ Message:
 Pour les détails d'implémentation de cette stratégie, consultez :
 
 - [**Business Model Canvas**](./BUSINESS_MODEL_CANVAS_A3E.md) - Modèle d'affaires détaillé
-- [**Spécifications Produit**](../5_product_specifications/PRD_MASTER.md) - Fonctionnalités détaillées
-- [**Roadmap d'Implémentation**](../6_implementation_roadmap/ROADMAP_STRATEGIQUE_BOOTSTRAP.md) - Plan d'exécution
+- [**Spécifications Produit**](../6_product_specifications/PRD_MASTER.md) - Fonctionnalités détaillées
+- [**Roadmap d'Implémentation**](../8_implementation_roadmap/ROADMAP_STRATEGIQUE_BOOTSTRAP.md) - Plan d'exécution
 - [**Analyse Concurrentielle**](../2_competitive_analysis/ANALYSE_CONCURRENTIELLE_STRATEGIQUE.md) - Positionnement marché
 - [**Architecture Technique**](../4_technical_architecture/STACK_TECHNIQUE.md) - Implémentation technique
 
@@ -369,6 +406,6 @@ Le timing est optimal : la Loi 25 crée une fenêtre d'opportunité unique, le m
 ---
 
 *Document stratégique - Version 1.0*  
-*Dernière révision : Juillet 2025*  
+*Dernière révision : Juillet 2024*  
 *Prochaine révision : Après validation 10 premiers clients*  
 *Contact : equipe@a3e.ca*

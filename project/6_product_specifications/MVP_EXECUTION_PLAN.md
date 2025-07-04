@@ -2,8 +2,8 @@
 ## Plan d'Exécution Technique pour Livraison Rapide
 
 > **Document d'exécution** - Roadmap technique concrète basée sur validation  
-> **Date**: Juillet 2025  
-> **Duration**: 16 semaines (4 mois)  
+> **Date**: Juillet 2024  
+> **Duration**: 16 semaines (4 mois de développement dans Phase 1: Mois 3-9)  
 > **Budget estimé**: 30,000-50,000$
 
 📚 **[← Retour PRD Master](./PRD_MASTER.md)** | **[→ Validation Plan](../1_business_foundation/VALIDATION_PLAN.md)** | **[→ Stack Technique](../4_technical_architecture/STACK_TECHNIQUE.md)**
@@ -197,17 +197,17 @@ gantt
     axisFormat  %d/%m
     
     section Infrastructure
-    Setup Dev Environment    :a1, 2025-07-01, 5d
+    Setup Dev Environment    :a1, 2024-07-01, 5d
     CI/CD Pipeline           :a2, after a1, 3d
     Database Architecture    :a3, after a2, 4d
     
     section Core Auth
-    User Management          :b1, 2025-07-07, 7d
+    User Management          :b1, 2024-07-07, 7d
     Multi-tenant Setup       :b2, after b1, 5d
     Security Basics          :b3, after b2, 3d
     
     section UI Foundation
-    Design System Setup      :c1, 2025-07-14, 5d
+    Design System Setup      :c1, 2024-07-14, 5d
     Responsive Framework     :c2, after c1, 7d
     Navigation Structure     :c3, after c2, 3d
 ```
@@ -287,6 +287,116 @@ gantt
 ---
 
 ## 🛠️ **ARCHITECTURE TECHNIQUE MVP**
+
+### **Timeline Complète 16 Semaines**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+gantt
+    title MVP Execution - 16 Semaines Complètes
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d/%m
+    
+    section Phase 0: Foundation
+    Infrastructure Setup     :p0a, 2024-07-01, 14d
+    Auth & UI Framework      :p0b, 2024-07-15, 14d
+    
+    section Phase 1: Core
+    Module Planification     :p1a, 2024-08-01, 14d
+    Module Conception        :p1b, 2024-08-15, 14d
+    Module Construction      :p1c, 2024-08-29, 14d
+    
+    section Phase 2: Complete
+    Advanced Features        :p2a, 2024-09-12, 14d
+    Module Maintenance       :p2b, 2024-09-26, 14d
+    
+    section Phase 3: Polish
+    Production Ready         :p3a, 2024-10-10, 14d
+```
+
+### **Architecture Stack MVP**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph TD
+    subgraph "Frontend Stack"
+        F1[NextJS 14<br/>App Router]
+        F2[Shadcn UI<br/>Tailwind]
+        F3[PWA<br/>Mobile]
+    end
+    
+    subgraph "Backend Stack"
+        B1[Supabase<br/>PostgreSQL]
+        B2[Auth + Storage<br/>Realtime]
+        B3[API Routes<br/>NextJS]
+    end
+    
+    subgraph "Infrastructure"
+        I1[Vercel<br/>Hosting]
+        I2[Supabase<br/>Canada]
+        I3[Sentry<br/>Monitoring]
+    end
+    
+    F1 --> B3
+    F2 --> B3
+    F3 --> B3
+    B3 --> B1
+    B3 --> B2
+    B1 --> I2
+    F1 --> I1
+    
+    classDef frontend fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:14px
+    classDef backend fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef infra fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
+    
+    class F1,F2,F3 frontend
+    class B1,B2,B3 backend
+    class I1,I2,I3 infra
+```
+
+### **Feature Priority Matrix (MoSCoW)**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+quadrantChart
+    title Feature Priority: Impact vs Effort
+    x-axis Low Effort High
+    y-axis Low Impact High
+    quadrant-1 Quick Wins
+    quadrant-2 Major Projects
+    quadrant-3 Fill-ins
+    quadrant-4 Thankless Tasks
+    
+    PLN-001 Dashboard: [0.3, 0.8]
+    PLN-002 Projets: [0.4, 0.9]
+    CON-001 Documents: [0.6, 0.7]
+    CONS-001 Mobile: [0.8, 0.9]
+    MAINT-001 Actifs: [0.7, 0.6]
+    TRANS-001 Auth: [0.5, 0.95]
+```
+
+### **User Journey MVP**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    Start[👤<br/>Nouvel<br/>Utilisateur] --> Login[🔐<br/>Login<br/>SSO]
+    Login --> Onboard[📚<br/>Onboarding<br/>Guidé]
+    Onboard --> Dashboard[📊<br/>Dashboard<br/>Principal]
+    
+    Dashboard --> Plan[📋<br/>Planification<br/>Projets]
+    Dashboard --> Design[📐<br/>Conception<br/>Documents]
+    Dashboard --> Build[🏗️<br/>Construction<br/>Mobile]
+    Dashboard --> Maintain[🔧<br/>Maintenance<br/>Actifs]
+    
+    classDef user fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:14px
+    classDef core fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef module fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C,font-size:14px
+    
+    class Start,Login user
+    class Onboard,Dashboard core
+    class Plan,Design,Build,Maintain module
+```
 
 ### **Stack Technique Simplifié**
 
@@ -433,7 +543,7 @@ Quality:
 
 ```yaml
 Adoption:
-  - Design Partners Onboarded: 5-10
+  - Design Partners Onboarded: 5-10 (objectif final: 10 clients actifs payants)
   - Weekly Active Users: >80% of onboarded users
   - Feature Adoption: >70% utilisent 3+ modules
   - Support Tickets: <5/semaine
@@ -501,7 +611,7 @@ Transition vers [PRD_PHASE2_EXPANSION.md](./PRD_PHASE2_EXPANSION.md):
 ### **Risques Techniques**
 | Risque | Probabilité | Impact | Mitigation |
 |--------|-------------|--------|------------|
-| Complexité multi-tenant | Moyenne | Élevé | Architecture simple Supabase RLS |
+| Complexité multi-tenant | Moyenne | Élevé | Architecture simple Supabase RLS, migration progressive vers microservices |
 | Performance mobile | Faible | Moyen | PWA + optimisations précoces |
 | Intégration documents | Moyenne | Moyen | Supabase Storage + fallback solutions |
 
@@ -526,5 +636,5 @@ Transition vers [PRD_PHASE2_EXPANSION.md](./PRD_PHASE2_EXPANSION.md):
 ---
 
 *Document d'exécution - Ajustements selon feedback design partners*  
-*Dernière mise à jour : Juillet 2025*  
+*Dernière mise à jour : Juillet 2024*  
 *Prochaine révision : Checkpoint Week 4*

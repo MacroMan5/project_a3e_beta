@@ -2,7 +2,7 @@
 ## Product Requirements Document - Plateforme Mature & Scaling (Mois 19-30)
 
 > **Document produit officiel** - Spécifications Phase 3: Plateforme complète, scalabilité, intégrations avancées  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Version**: 1.0  
 > **Équipe**: Fondateurs + Dév + Customer Success + Sales
 
@@ -13,7 +13,7 @@
 ## 🧭 NAVIGATION
 
 1. [PRD_MASTER](./PRD_MASTER.md) - Vue d'ensemble, stratégie et analyse de marché
-2. [PRD_PHASE1_MVP](./PRD_PHASE1_MVP.md) - Validation et MVP (Mois 1-9)
+2. [PRD_PHASE1_MVP](./PRD_PHASE1_MVP.md) - Validation et MVP (Mois 3-9)
 3. [PRD_PHASE2_EXPANSION](./PRD_PHASE2_EXPANSION.md) - Expansion et croissance (Mois 10-18)
 4. **PRD_PHASE3_PLATFORM** (ce document) - Plateforme mature et scaling (Mois 19-30)
 
@@ -28,6 +28,101 @@
 5. **Automatisation & IA** : Workflows automatisés, IA prédictive, analytics avancés
 
 ---
+
+## 🏗️ **PLATFORM ARCHITECTURE VISION**
+
+### **API Ecosystem Overview**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph TD
+    subgraph "A3E Platform Core"
+        API[🔌<br/>API Gateway<br/>v2.0]
+        AUTH[🔐<br/>SSO Hub<br/>Keycloak]
+        WEBHOOK[📡<br/>Webhooks<br/>Engine]
+    end
+    
+    subgraph "Partner Integrations"
+        SEAO[🏛️<br/>SEAO<br/>API]
+        ERP[💼<br/>ERP<br/>SAP/Oracle]
+        BIM[🏗️<br/>BIM<br/>Autodesk]
+    end
+    
+    subgraph "Marketplace Modules"
+        HEALTH[🏥<br/>Module<br/>Santé]
+        EDU[🎓<br/>Module<br/>Éducation]
+        CITY[🏙️<br/>Module<br/>Villes]
+    end
+    
+    API --> SEAO
+    API --> ERP
+    API --> BIM
+    
+    API --> HEALTH
+    API --> EDU
+    API --> CITY
+    
+    AUTH --> API
+    WEBHOOK --> API
+    
+    classDef core fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:14px
+    classDef integration fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef module fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
+    
+    class API,AUTH,WEBHOOK core
+    class SEAO,ERP,BIM integration
+    class HEALTH,EDU,CITY module
+```
+
+### **Security & Compliance Flow**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    User[👤<br/>Utilisateur] --> SSO[🔐<br/>SSO<br/>Login]
+    SSO --> RBAC[🛡️<br/>RBAC<br/>Permissions]
+    RBAC --> Access[✅<br/>Accès<br/>Autorisé]
+    
+    Access --> Audit[📋<br/>Audit<br/>Logs]
+    Access --> Encrypt[🔒<br/>Données<br/>Chiffrées]
+    
+    Audit --> Compliance[⚖️<br/>Conformité<br/>Loi 25]
+    Encrypt --> Compliance
+    
+    classDef security fill:#FFCDD2,stroke:#D32F2F,color:#B71C1C,font-size:14px
+    classDef process fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef compliance fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:14px
+    
+    class User,SSO,RBAC security
+    class Access,Audit,Encrypt process
+    class Compliance compliance
+```
+
+### **Expansion Roadmap Canada**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+gantt
+    title Expansion Géographique Canada
+    dateFormat  YYYY-MM
+    axisFormat  %m-%Y
+    
+    section Québec Base
+    Market Penetration    :q1, 2024-07, 30M
+    
+    section Ontario
+    Market Research       :o1, 2024-12, 3M
+    Localization          :o2, after o1, 3M
+    Pilot Launch          :o3, after o2, 6M
+    
+    section Maritimes
+    New Brunswick         :nb1, 2026-09, 6M
+    Nova Scotia           :ns1, after nb1, 6M
+    
+    section West
+    Manitoba              :mb1, 2027-03, 6M
+    Alberta               :ab1, after mb1, 6M
+```
 
 ## 📅 PLANNING DÉTAILLÉ
 
@@ -192,4 +287,4 @@ PLAT-007: Plateforme Ouverte & Dev
 ---
 
 *Document vivant - À réviser trimestriellement*
-*Dernière mise à jour : Juillet 2025*
+*Dernière mise à jour : Juillet 2024*

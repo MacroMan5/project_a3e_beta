@@ -2,11 +2,11 @@
 ## Vue d'ensemble et Timeline des Phases de Développement
 
 > **Document de planification** - Synthèse des phases et jalons critiques  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Version**: 1.0  
 > **Équipe**: Fondateurs + Développement
 
-📚 **[← Retour README](../../README.md)** | **[→ Roadmap Bootstrap](ROADMAP_STRATEGIQUE_BOOTSTRAP.md)** | **[→ Spécifications](../5_product_specifications/PRD_MASTER.md)**
+📚 **[← Retour README](../../README.md)** | **[→ Roadmap Bootstrap](ROADMAP_STRATEGIQUE_BOOTSTRAP.md)** | **[→ Spécifications](../6_product_specifications/PRD_MASTER.md)**
 
 ---
 
@@ -32,27 +32,27 @@ gantt
     axisFormat  %m-%Y
     
     section Phases
-    Phase 0: Validation       :phase0, 07-2025, 2M
+    Phase 0: Validation       :phase0, 07-2024, 2M
     Phase 1: MVP              :phase1, after phase0, 7M
     Phase 2: Expansion        :phase2, after phase1, 9M
     Phase 3: Plateforme       :phase3, after phase2, 12M
     Phase 4: Scaling          :phase4, after phase3, 12M
     
     section Clients
-    0 clients                 :clients0, 07-2025, 2M
+    0 clients                 :clients0, 07-2024, 2M
     5-10 clients pilotes      :clients1, after clients0, 7M
     10-50 clients             :clients2, after clients1, 9M
     50-200+ clients           :clients3, after clients2, 12M
     200-1000+ clients         :clients4, after clients3, 12M
     
     section Équipe
-    2 fondateurs              :team1, 07-2025, 9M
+    2 fondateurs              :team1, 07-2024, 9M
     3-5 personnes             :team2, after team1, 9M
     5-15 personnes            :team3, after team2, 12M
     15-50 personnes           :team4, after team3, 12M
     
     section Revenue
-    0$ MRR                    :rev1, 07-2025, 5M
+    0$ MRR                    :rev1, 07-2024, 5M
     1k$ MRR                   :rev2, after rev1, 4M
     10k$ MRR                  :rev3, after rev2, 9M
     40k$ MRR                  :rev4, after rev3, 12M
@@ -95,12 +95,12 @@ gantt
 ---
 
 ## 💻 **PHASE 1 : MVP ULTRA-MINIMAL**
-**Timeline**: Mois 3-9 | **Budget**: <5k$ | **Équipe**: 2 personnes
+**Timeline**: Mois 3-9 (7 mois dont 16 semaines dev) | **Budget**: 30-50k$ | **Équipe**: 3-4 personnes
 
 ### **Objectifs Critiques**
 - 🎯 Développer MVP complet 4 modules
 - 🎯 Acquérir 10 clients payants
-- 🎯 Atteindre 1,000$ MRR
+- 🎯 Atteindre 2,000$ MRR
 - 🎯 Établir product-market fit initial
 
 ### **Développement par Sprints**
@@ -125,7 +125,7 @@ gantt
 
 ### **Métriques de Succès**
 - **10+** clients actifs payants
-- **1,000$** MRR atteint
+- **2,000$** MRR atteint
 - **>40** NPS Score
 - **<5** bugs critiques/mois
 - **>99.5%** uptime
@@ -137,13 +137,13 @@ gantt
 
 ### **Objectifs Critiques**
 - 📈 Croître de 10 à 50 clients
-- 📈 Atteindre 10,000$ MRR
+- 📈 Atteindre 17,500$ MRR
 - 📈 Implémenter fonctionnalités avancées
 - 📈 Établir canaux d'acquisition scalables
 
 ### **Développement Produit**
 
-**Q4 2025 (Mois 10-12)**
+**Q4 2024 (Mois 10-12)**
 - 📄 Gestion documentaire avancée
 - 🔄 Intégration SEAO basique
 - 👥 Collaboration temps réel
@@ -169,7 +169,7 @@ gantt
 
 ### **Métriques de Succès**
 - **50+** clients actifs
-- **10,000$** MRR
+- **17,500$** MRR
 - **>15%** croissance mensuelle MRR
 - **<10%** churn annuel
 - **>60** NPS Score
@@ -215,7 +215,7 @@ gantt
 - **40,000$** MRR
 - **>20%** croissance mensuelle
 - **<5%** churn annuel
-- **>70** NPS Score
+- **>60** NPS Score
 
 ---
 
@@ -283,7 +283,7 @@ gantt
 
 **Critères obligatoires**
 - 👥 50+ clients actifs
-- 💰 10,000$ MRR
+- 💰 17,500$ MRR
 - 📈 Croissance >15% mensuelle
 - 🎯 Pipeline >100 prospects
 - 👨‍💻 Équipe rodée 5+ personnes
@@ -310,7 +310,7 @@ gantt
 |-------|-------|-------------|---------|---------|------------|
 | Phase 0 | 2 mois | 0 | 0$ | 0$ | - |
 | Phase 1 | 7 mois | 10 | 1,000$ | 12,000$ | +∞% |
-| Phase 2 | 9 mois | 50 | 10,000$ | 120,000$ | +900% |
+| Phase 2 | 9 mois | 50 | 17,500$ | 210,000$ | +1650% |
 | Phase 3 | 12 mois | 200 | 40,000$ | 480,000$ | +300% |
 | Phase 4 | 12 mois | 500+ | 100,000$+ | 1,200,000$+ | +150% |
 
@@ -359,6 +359,6 @@ Ce planning phases fournit la roadmap claire pour transformer A3E Beta d'un conc
 ---
 
 *Document de planification - Version 1.0*  
-*Dernière révision : Juillet 2025*  
+*Dernière révision : Juillet 2024*  
 *Révision mensuelle obligatoire*  
 *Contact : equipe@a3e.ca*

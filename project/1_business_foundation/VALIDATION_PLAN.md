@@ -2,12 +2,12 @@
 ## Méthodologie Lean Startup pour Validation Hypothèses Critiques
 
 > **Document de validation** - Plan méthodologique Build-Measure-Learn  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Durée**: 60 jours  
 > **Budget estimé**: 3,000-5,000$  
 > **Status**: Prêt à exécution
 
-📚 **[← Retour README](../../README.md)** | **[→ BMC](./BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ MVP Plan](../5_product_specifications/MVP_EXECUTION_PLAN.md)** | **[→ Project Overview](./PROJECT_OVERVIEW.md)**
+📚 **[← Retour README](../../README.md)** | **[→ BMC](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ MVP Plan](../6_product_specifications/MVP_EXECUTION_PLAN.md)** | **[→ Project Overview](./PROJECT_OVERVIEW.md)**
 
 ---
 
@@ -16,7 +16,7 @@
 ### **Objectif Principal**
 Valider les 6 hypothèses critiques identifiées dans notre Business Model Canvas et analyse concurrentielle pour minimiser les risques avant le développement MVP.
 
-### **Méthodologie Build-Measure-Learn 2025**
+### **Méthodologie Build-Measure-Learn 2024**
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph LR
@@ -42,16 +42,14 @@ graph LR
 ```
 
 > **Légende**: Ce diagramme illustre notre méthodologie de validation itérative Build-Measure-Learn, inspirée du Lean Startup, pour valider chaque hypothèse critique, apprendre rapidement, et pivoter si nécessaire avant d'investir dans le développement complet.
-```
 
----
 
 ## 📋 **6 HYPOTHÈSES CRITIQUES À VALIDER**
 
 ### **H1: PROBLÈME - Pain Point Excel/Email** {#h1-probleme}
 **Hypothèse**: 90%+ des gestionnaires publics québécois perdent 10-15h/semaine à cause de l'inefficacité Excel/Email
 
-**Source**: [BMC Customer Segments](./BUSINESS_MODEL_CANVAS_A3E.md#customer-segments) + [Analyse Concurrentielle](../2_competitive_analysis/ANALYSE_CONCURRENTIELLE_STRATEGIQUE.md#faiblesses-critiques)
+**Source**: [BMC Customer Segments](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md#customer-segments) + [Analyse Concurrentielle](../2_competitive_analysis/ANALYSE_CONCURRENTIELLE_STRATEGIQUE.md#faiblesses-critiques)
 
 **Validation**:
 - **Build**: Script interview + questionnaire 20 questions
@@ -64,7 +62,7 @@ graph LR
 ### **H2: SOLUTION - Value Proposition Uniqueness** {#h2-solution}
 **Hypothèse**: Notre solution (prix 5x moins cher + conformité Loi 25) crée une valeur perçue supérieure aux alternatives
 
-**Source**: [BMC Value Propositions](./BUSINESS_MODEL_CANVAS_A3E.md#value-propositions)
+**Source**: [BMC Value Propositions](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md#value-propositions)
 
 **Validation**:
 - **Build**: Prototype Figma interactif + pricing comparison
@@ -88,9 +86,9 @@ graph LR
 - **Critère succès**: 100+ prospects qualifiés identifiés, 50+ accessibles
 
 ### **H4: PRICING - Willingness to Pay** {#h4-pricing}
-**Hypothèse**: Organismes publics accepteront payer 200$/utilisateur/mois pour notre solution complète
+**Hypothèse**: Organismes publics accepteront payer 200$/org/mois + 75$/utilisateur additionnel pour notre solution complète
 
-**Source**: [BMC Revenue Streams](./BUSINESS_MODEL_CANVAS_A3E.md#revenue-streams)
+**Source**: [BMC Revenue Streams](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md#revenue-streams)
 
 **Validation**:
 - **Build**: Simulation pricing + ROI calculator
@@ -98,12 +96,12 @@ graph LR
   - 15 exercices pricing avec prospects
   - Budget max acceptable vs features offertes
   - Comparaison coût actuel vs ROI estimé
-- **Critère succès**: 70%+ acceptent 200$/mois, ROI positif <12 mois
+- **Critère succès**: 70%+ acceptent 200$/org + 75$/user (≈350$ ARPU base 3 users), ROI positif <12 mois
 
 ### **H5: ACQUISITION - Channel Effectiveness** {#h5-acquisition}
 **Hypothèse**: Canaux B2G (SEAO, associations, LinkedIn) génèrent suffisamment de leads qualifiés
 
-**Source**: [BMC Channels](./BUSINESS_MODEL_CANVAS_A3E.md#channels)
+**Source**: [BMC Channels](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md#channels)
 
 **Validation**:
 - **Build**: Campagne test sur 3 canaux principaux
@@ -317,7 +315,6 @@ flowchart TD
 ```
 
 > **Légende**: Ce diagramme présente l'arbre de décision pour déterminer si nous devons poursuivre le développement du MVP, pivoter notre stratégie, ou arrêter le projet en fonction de la validation de nos hypothèses critiques "Must Have" et "Should Have".
-```
 
 ---
 
@@ -356,7 +353,7 @@ TOTAL: 5,000$ (Budget maximum)
 
 ### **Si GO pour MVP**
 - **Design Partners**: 5 organismes confirmés
-- **Pricing Validated**: 200$/mois acceptable
+- **Pricing Validated**: 200$/org + 75$/user (≈350$ ARPU) acceptable
 - **Timeline Confident**: 3-6 mois développement MVP
 - **Market Size**: 100+ prospects pipeline qualifié
 - **Competitive Moat**: Avantage Loi 25 confirmé
@@ -395,5 +392,5 @@ TOTAL: 5,000$ (Budget maximum)
 ---
 
 *Document évolutif - Ajustements selon apprentissages*  
-*Dernière mise à jour : Juillet 2025*  
+*Dernière mise à jour : Juillet 2024*  
 *Prochaine révision : Après Sprint 1 validation*

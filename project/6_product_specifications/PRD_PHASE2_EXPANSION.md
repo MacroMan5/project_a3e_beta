@@ -2,7 +2,7 @@
 ## Product Requirements Document - Expansion et Croissance (Mois 10-18)
 
 > **Document produit officiel** - Spécifications Phase 2: Expansion et Croissance  
-> **Date**: Juillet 2025  
+> **Date**: Juillet 2024  
 > **Version**: 1.0  
 > **Équipe**: Fondateurs + Développement
 
@@ -13,7 +13,7 @@
 Cette PRD est divisée en plusieurs documents pour une meilleure lisibilité et gestion:
 
 1. [**PRD_MASTER**](./PRD_MASTER.md) - Vue d'ensemble, stratégie et analyse de marché
-2. [**PRD_PHASE1_MVP**](./PRD_PHASE1_MVP.md) - Validation et MVP (Mois 1-9)
+2. [**PRD_PHASE1_MVP**](./PRD_PHASE1_MVP.md) - Validation et MVP (Mois 3-9)
 3. [**PRD_PHASE2_EXPANSION**](./PRD_PHASE2_EXPANSION.md) - Expansion et croissance (Mois 10-18) (ce document)
 4. [**PRD_PHASE3_PLATFORM**](./PRD_PHASE3_PLATFORM.md) - Plateforme mature et scaling (Mois 19-30)
 
@@ -30,38 +30,82 @@ La Phase 2 (Mois 10-18) a pour objectifs principaux:
 5. **Atteindre** 9,000$ MRR
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
-graph TD
-    classDef growth fill:#EC407A,stroke:#D81B60,color:white
-    classDef tech fill:#42A5F5,stroke:#1976D2,color:white
-    classDef feature fill:#66BB6A,stroke:#388E3C,color:white
-    classDef team fill:#FFA726,stroke:#F57C00,color:white
-    classDef goal fill:#7E57C2,stroke:#5E35B1,color:white
-
-    MVP[MVP<br/>10 Clients] --> G[Croissance<br/>50 Clients]
-    MVP --> T[Evolution<br/>Architecture]
-    MVP --> F[Features<br/>Avancées]
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    MVP[📈<br/>MVP<br/>10 Clients] --> Growth[🚀<br/>Croissance<br/>50 Clients]
+    MVP --> Tech[⚙️<br/>Architecture<br/>Scaling]
+    MVP --> Features[✨<br/>Features<br/>Avancées]
     
-    G --> Team[Équipe<br/>5 Personnes]
-    T --> Team
-    F --> Team
+    Growth --> Goal[💰<br/>9,000$<br/>MRR]
+    Tech --> Goal
+    Features --> Goal
     
-    Team --> Goal[9,000$ MRR]
+    classDef mvp fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef expansion fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
+    classDef goal fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,font-size:16px
     
-    G1[Marketing<br/>Content] --> G
-    G2[Sales<br/>Process] --> G
-    
-    T1[Microservices<br/>Architecture] --> T
-    T2[Scaling<br/>Cloud] --> T
-    
-    F1[Analytics<br/>Prédictifs] --> F
-    F2[Collaboration<br/>Temps Réel] --> F
-    
-    class MVP,G,G1,G2 growth
-    class T,T1,T2 tech
-    class F,F1,F2 feature
-    class Team team
+    class MVP mvp
+    class Growth,Tech,Features expansion
     class Goal goal
+```
+
+### **Architecture Scaling Evolution**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph TD
+    subgraph "Phase 1: MVP"
+        P1F[NextJS<br/>Monolithe]
+        P1B[Supabase<br/>Simple]
+        P1I[Vercel<br/>Basic]
+    end
+    
+    subgraph "Phase 2: Scaling"
+        P2F[NextJS +<br/>NestJS]
+        P2B[PostgreSQL<br/>+ Redis]
+        P2I[Kubernetes<br/>OVH]
+    end
+    
+    P1F --> P2F
+    P1B --> P2B
+    P1I --> P2I
+    
+    classDef phase1 fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:14px
+    classDef phase2 fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:14px
+    
+    class P1F,P1B,P1I phase1
+    class P2F,P2B,P2I phase2
+```
+
+### **Feature Evolution Map**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
+graph LR
+    subgraph "Phase 1 Features"
+        PLN1[📊 Dashboard Basic]
+        CON1[📁 Documents Basic]
+        CONS1[📱 Mobile PWA]
+        MAINT1[🔧 Actifs Basic]
+    end
+    
+    subgraph "Phase 2 Enhanced"
+        PLN2[📈 Analytics Prédictifs]
+        CON2[⚡ Collaboration Temps Réel]
+        CONS2[🔄 Workflows Automatisés]
+        MAINT2[🚨 Alertes Préventives]
+    end
+    
+    PLN1 --> PLN2
+    CON1 --> CON2
+    CONS1 --> CONS2
+    MAINT1 --> MAINT2
+    
+    classDef basic fill:#E8F5E8,stroke:#2E7D32,color:#1B5E20,font-size:12px
+    classDef enhanced fill:#FFF3E0,stroke:#F57C00,color:#E65100,font-size:12px
+    
+    class PLN1,CON1,CONS1,MAINT1 basic
+    class PLN2,CON2,CONS2,MAINT2 enhanced
 ```
 
 ---
@@ -1069,7 +1113,7 @@ Rétention Stratégique:
 | **Produit** | Feature Adoption | >80% | >85% |
 | **Produit** | NPS Score | >50 | >60 |
 | **Produit** | Mobile App Usage | >40% users | >60% users |
-| **Business** | CAC | <800$ | <1,000$ |
+| **Business** | CAC | <500$ | <500$ |
 | **Business** | LTV:CAC | >5:1 | >8:1 |
 | **Business** | Churn mensuel | <3% | <2% |
 | **Technique** | Uptime | >99.5% | >99.9% |
@@ -1392,6 +1436,6 @@ Pour plus de détails sur la Phase 3, voir [PRD_PHASE3_PLATFORM.md](./PRD_PHASE3
 ---
 
 *Document Phase 2: Expansion - Version 1.0*  
-*Dernière révision : Juillet 2025*  
+*Dernière révision : Juillet 2024*  
 *Prochaine révision : Après atteinte 20 clients*  
 *Contact : equipe@a3e.ca*

@@ -1,4 +1,4 @@
-# 📋 PRD PHASE 2: EXPANSION - InfraQC
+# 📋 PRD PHASE 2: EXPANSION - A3E Beta
 ## Product Requirements Document - Expansion et Croissance (Mois 10-18)
 
 > **Document produit officiel** - Spécifications Phase 2: Expansion et Croissance  
@@ -929,19 +929,19 @@ Blog Articles:
   - "Guide complet conformité Loi 25 pour organismes publics" (SEO)
   - "7 façons d'optimiser le budget maintenance infrastructure" (Lead Gen)
   - "Étude: Les municipalités utilisant outils digitaux économisent 23%" (Social)
-  - "Comparatif: Procore vs InfraQC pour le marché québécois" (Conversion)
+  - "Comparatif: Procore vs A3E Beta pour le marché québécois" (Conversion)
   
 Webinaires:
   - "Comment digitaliser vos processus construction en 30 jours" (Mensuel)
   - "Panel experts: L'avenir des infrastructures municipales au Québec" (Trimestriel)
-  - "Workshop: Créer des PFT efficaces avec InfraQC" (Bi-mensuel)
+  - "Workshop: Créer des PFT efficaces avec A3E Beta" (Bi-mensuel)
   - "Témoignages clients: Transformation digitale réussie" (Mensuel)
   
 Ressources Téléchargeables:
   - Templates PFT municipalités/écoles
   - Checklist conformité Loi 25
   - Calculateur ROI personnalisable
-  - Guide migration Excel vers InfraQC
+  - Guide migration Excel vers A3E Beta
   
 Stratégie SEO:
   - Mots-clés locaux québécois
@@ -954,8 +954,8 @@ Stratégie SEO:
 
 | Offre | Prix | Cible | Inclusions |
 |-------|------|-------|------------|
-| **Standard** | 180$/utilisateur/mois | Municipalités <20k habitants | Core modules, Support standard |
-| **Professional** | 240$/utilisateur/mois | Municipalités 20k-50k habitants | Tous modules, Intégrations, Support prioritaire |
+| **Standard** | 200$/utilisateur/mois | Municipalités <20k habitants | Core modules, Support standard |
+| **Professional** | 350$/utilisateur/mois | Municipalités 20k-50k habitants | Tous modules, Intégrations, Support prioritaire |
 | **Enterprise** | Custom | CSS, grandes municipalités | Modules avancés, Intégrations sur mesure, Account manager dédié |
 
 ### **Sales Process**

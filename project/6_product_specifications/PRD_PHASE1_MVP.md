@@ -1,4 +1,4 @@
-# 📋 PRD PHASE 1: MVP - InfraQC
+# 📋 PRD PHASE 1: MVP - A3E Beta
 ## Product Requirements Document - Validation et MVP (Mois 1-9)
 
 > **Document produit officiel** - Spécifications Phase 1: Validation et MVP  
@@ -558,7 +558,7 @@ graph TD
     class Vercel,CI deploy
 ```
 
-Pour plus de détails sur l'architecture technique complète, voir [STACK_TECHNIQUE.md](/home/therouxe/project_a3e/project/stack/STACK_TECHNIQUE.md).
+Pour plus de détails sur l'architecture technique complète, voir [STACK_TECHNIQUE.md](../4_technical_architecture/STACK_TECHNIQUE.md).
 
 ### **Sécurité et Conformité MVP**
 

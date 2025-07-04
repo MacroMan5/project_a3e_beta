@@ -5,7 +5,7 @@
 > **Date**: Juillet 2025  
 > **Confidentiel**: Usage interne uniquement
 
-📚 **[← Retour INDEX](../INDEX.md)** | **[→ Business Model Canvas](../1_business_foundation/BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ Stack Technique](../4_technical_architecture/STACK_TECHNIQUE.md)**
+📚 **[← Retour README](../../README.md)** | **[→ Business Model Canvas](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ Stack Technique](../4_technical_architecture/STACK_TECHNIQUE.md)**
 
 ---
 

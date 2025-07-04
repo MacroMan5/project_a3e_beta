@@ -1,5 +1,5 @@
-# 📋 PRD MASTER - InfraQC
-## Product Requirements Document - Plateforme de Gestion Infrastructure Québec
+# 📋 PRD MASTER - A3E Beta
+## Product Requirements Document - A3E Beta Platform
 
 > **Document produit officiel** - Spécifications complètes pour développement  
 > **Date**: Juillet 2025  
@@ -22,7 +22,7 @@ Cette PRD est divisée en plusieurs documents pour une meilleure lisibilité et 
 ## 🎯 **EXECUTIVE SUMMARY**
 
 ### **Vision Produit**
-InfraQC révolutionne la gestion d'infrastructure publique au Québec en centralisant planification, conception, construction et maintenance sur une plateforme unique alimentée par l'IA. Notre mission : transformer chaque gestionnaire public en super-gestionnaire grâce à l'automatisation intelligente.
+A3E Beta révolutionne la gestion d'infrastructure publique au Québec en centralisant planification, conception, construction et maintenance sur une plateforme unique alimentée par l'IA. Notre mission : transformer chaque gestionnaire public en super-gestionnaire grâce à l'automatisation intelligente.
 
 ### **Problème Résolu**
 - **95% des organismes publics** utilisent Excel/email pour gérer leurs projets d'infrastructure
@@ -48,7 +48,7 @@ graph LR
     C[Excel/Email<br/>Obsolètes] -->|Cause| B
     D[Non-conformité<br/>Loi 25] -->|Cause| E[Risque<br/>Légal]
     
-    F[Plateforme<br/>Unifiée InfraQC] -->|Résout| A
+    F[Plateforme<br/>Unifiée A3E Beta] -->|Résout| A
     F -->|Remplace| C
     F -->|Garantit| D
     
@@ -79,7 +79,7 @@ Utilisateurs potentiels:
   Inspecteurs/techniciens: 5,000+
   
 Pricing:
-  200$/utilisateur/mois × 9,600 users = 23M$/an (TAM)
+  200$/utilisateur/mois × 15,000 users = 36M$/an (TAM conservateur, potentiel 50M$)
 ```
 
 ### **Analyse Concurrentielle**
@@ -105,10 +105,10 @@ quadrantChart
     Autodesk: [0.3, 0.05]
     PG Solutions: [0.6, 0.4]
     Solutions Excel: [0.5, 0.9]
-    InfraQC: [0.9, 0.8]
+    A3E Beta: [0.9, 0.8]
 ```
 
-Pour une analyse concurrentielle plus détaillée, voir [ANALYSE_CONCURRENTIELLE_STRATEGIQUE.md](/home/therouxe/project_a3e/concurence/ANALYSE_CONCURRENTIELLE_STRATEGIQUE.md).
+Pour une analyse concurrentielle plus détaillée, voir [ANALYSE_CONCURRENTIELLE_STRATEGIQUE.md](../2_competitive_analysis/ANALYSE_CONCURRENTIELLE_STRATEGIQUE.md).
 
 ### **Avantages Concurrentiels Défendables**
 1. **Barrière réglementaire** : Conformité Loi 25 native
@@ -121,7 +121,7 @@ Pour une analyse concurrentielle plus détaillée, voir [ANALYSE_CONCURRENTIELLE
 ## 🎮 **PRODUCT STRATEGY**
 
 ### **Positionnement**
-**"Le Shopify de la construction publique québécoise"**
+**"Le Shopify de la construction publique québécoise - A3E Beta"**
 - Platform-as-a-Service pour infrastructure publique
 - Simple à adopter, puissant à l'usage
 - Croissance organique via word-of-mouth
@@ -150,92 +150,30 @@ Phase 3 (Mainstream):
   - Expansion géographique
 ```
 
-Voir le [ROADMAP_STRATEGIQUE_BOOTSTRAP.md](/home/therouxe/project_a3e/project/project_management/ROADMAP_STRATEGIQUE_BOOTSTRAP.md) pour le plan détaillé de croissance sans financement externe.
+Voir le [ROADMAP_STRATEGIQUE_BOOTSTRAP.md](../6_implementation_roadmap/ROADMAP_STRATEGIQUE_BOOTSTRAP.md) pour le plan détaillé de croissance sans financement externe.
 
 ---
 
 ## 👥 **USER PERSONAS**
 
-### **Persona 1: Directeur Infrastructure Municipal**
-```yaml
-Profil:
-  Nom: "Martin Dubois"
-  Âge: 45-55 ans
-  Expérience: 15+ ans secteur public
-  Formation: Ingénieur civil ou administration
-  
-Contexte:
-  Organisation: Municipalité 15,000 habitants
-  Budget: 2-5M$/an projets infrastructure
-  Équipe: 3-8 employés
-  Défis: Manque de temps, pression citoyens, conformité
-  
-Goals:
-  - Optimiser budget infrastructure limité
-  - Réduire délais approbation projets
-  - Améliorer communication avec citoyens
-  - Preuves impacts investissements
-  
-Pain Points:
-  - Données éparpillées (Excel, emails, papier)
-  - Difficile prioriser projets objectivement
-  - Pas de visibilité temps réel progression
-  - Reporting manuel chronophage
-```
+**📚 Pour les personas détaillés, voir [PRODUCT_STRATEGY.md](../3_product_strategy/PRODUCT_STRATEGY.md#user-personas)**
 
-### **Persona 2: Gestionnaire de Projets Construction**
-```yaml
-Profil:
-  Nom: "Isabelle Tremblay"  
-  Âge: 35-45 ans
-  Expérience: 10+ ans gestion projets
-  Formation: Gestion construction/architecture
-  
-Contexte:
-  Organisation: Centre services scolaires
-  Projets: 3-5 simultanés (rénovations/nouvelles constructions)
-  Budget: 500k-5M$ par projet
-  Stakeholders: Architectes, entrepreneurs, ministère
-  
-Goals:
-  - Livrer projets à temps et budget
-  - Coordination efficace équipes externes
-  - Traçabilité complète décisions/changements
-  - Communication claire parties prenantes
-  
-Pain Points:
-  - Emails perdus dans communications multiples
-  - Versions documents difficiles à suivre
-  - Approbations lentes (goulots bureaucratiques)
-  - Rapports de visite inefficaces
-```
+**Résumé des 3 personas cibles :**
 
-### **Persona 3: Inspecteur/Technicien Terrain**
-```yaml
-Profil:
-  Nom: "Jean-François Côté"
-  Âge: 25-45 ans
-  Expérience: 5+ ans inspection/maintenance
-  Formation: Technique bâtiment/électromécanique
-  
-Contexte:
-  Organisation: Municipalité ou firme externe
-  Responsabilités: Inspections, rapports, suivi correctifs
-  Mobilité: 80% temps sur terrain
-  Équipement: Smartphone, tablette, outils mesure
-  
-Goals:
-  - Rapports inspection rapides et précis
-  - Documentation visuelle efficace (photos)
-  - Suivi facile recommandations/correctifs
-  - Éviter paperasse administrative
-  
-Pain Points:
-  - Formulaires papier perdus/illisibles
-  - Retranscription manuelle chronophage
-  - Pas d'accès info historique sur site
-  - Communication difficile avec gestionnaires
-```
+1. **🎯 Directeur Infrastructure Municipal** (Martin Dubois)
+   - Organisation: Municipalité 15K habitants
+   - Besoins: Dashboard analytics, priorisation projets, reporting exécutif
+   - Pain points: Données éparpillées, manque visibilité
+
+2. **🏗️ Gestionnaire Projets Construction** (Isabelle Tremblay)
+   - Organisation: Centre services scolaires
+   - Besoins: Collaboration documents, workflows approbation, suivi construction
+   - Pain points: Communications multiples, versions documents
+
+3. **🔧 Inspecteur/Technicien Terrain** (Jean-François Côté)
+   - Organisation: Municipalité/firme externe
+   - Besoins: Rapports mobile, photos annotations, checklists dynamiques
+   - Pain points: Formulaires papier, retranscription manuelle
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
@@ -257,7 +195,7 @@ graph TD
     I -->|Utilise| I2[Photos<br/>Annotations]
     I -->|Utilise| I3[Checklists<br/>Dynamiques]
     
-    P[Plateforme<br/>InfraQC] --> D1
+    P[Plateforme<br/>A3E Beta] --> D1
     P --> D2
     P --> D3
     P --> M1
@@ -309,7 +247,7 @@ gantt
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
 mindmap
-    root((InfraQC))
+    root((A3E Beta))
         Phase 1: MVP
             Validation
                 Customer Discovery
@@ -366,7 +304,7 @@ graph TD
     classDef maintain fill:#E91E63,stroke:#C2185B,color:white
     classDef transverse fill:#7E57C2,stroke:#5E35B1,color:white
 
-    App[InfraQC<br/>Plateforme] --> PLN[Module<br/>Planification]
+    App[A3E Beta<br/>Plateforme] --> PLN[Module<br/>Planification]
     App --> CON[Module<br/>Conception]
     App --> CONS[Module<br/>Construction]
     App --> MAINT[Module<br/>Maintenance]
@@ -404,7 +342,7 @@ Pour les spécifications détaillées de chaque module et feature, voir:
 - [PRD_PHASE2_EXPANSION.md](./PRD_PHASE2_EXPANSION.md) - Spécifications expansion
 - [PRD_PHASE3_PLATFORM.md](./PRD_PHASE3_PLATFORM.md) - Spécifications plateforme mature
 
-Pour les détails de l'architecture technique, voir [STACK_TECHNIQUE.md](/home/therouxe/project_a3e/project/stack/STACK_TECHNIQUE.md).
+Pour les détails de l'architecture technique, voir [STACK_TECHNIQUE.md](../4_technical_architecture/STACK_TECHNIQUE.md).
 
 ---
 
@@ -414,9 +352,9 @@ Pour les détails de l'architecture technique, voir [STACK_TECHNIQUE.md](/home/t
 
 | Étape | Timing | Clients | ARPU | MRR | ARR |
 |-------|--------|---------|------|-----|-----|
-| Fin Phase 1 | Mois 9 | 10 | 100$/mois | 1,000$ | 12,000$ |
-| Fin Phase 2 | Mois 18 | 50 | 180$/mois | 9,000$ | 108,000$ |
-| Fin Phase 3 | Mois 30 | 200 | 200$/mois | 40,000$ | 480,000$ |
+| Fin Phase 1 (MVP) | Mois 9 | 10 | 100$/mois | 1,000$ | 12,000$ |
+| Fin Phase 2 (Expansion) | Mois 18 | 50 | 180$/mois | 9,000$ | 108,000$ |
+| Fin Phase 3 (Platform) | Mois 30 | 200 | 200$/mois | 40,000$ | 480,000$ |
 | Post-Financement | Mois 36 | 500 | 220$/mois | 110,000$ | 1,320,000$ |
 
 ### **Unit Economics**
@@ -461,7 +399,7 @@ Pour les détails financiers complets, voir la section Financial Model dans les 
 
 ## 🎯 **CONCLUSION**
 
-Le projet InfraQC propose une solution unique pour le marché québécois de la gestion d'infrastructure publique, en combinant innovation technologique, conformité réglementaire et expertise locale. Notre approche par phases permet de:
+Le projet A3E Beta propose une solution unique pour le marché québécois de la gestion d'infrastructure publique, en combinant innovation technologique, conformité réglementaire et expertise locale. Notre approche par phases permet de:
 
 1. **Valider** rapidement les hypothèses avec un MVP ciblé
 2. **Croître** organiquement grâce aux références clients

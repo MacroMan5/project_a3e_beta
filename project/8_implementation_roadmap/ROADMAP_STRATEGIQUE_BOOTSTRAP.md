@@ -5,7 +5,7 @@
 > **Date**: Juillet 2025  
 > **Méthodologie**: Build-Measure-Learn avec contraintes zéro capital
 
-📚 **[← Retour INDEX](../INDEX.md)** | **[→ Business Model Canvas](../1_business_foundation/BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ PRD MVP](PRD_PHASE1_MVP.md)**
+📚 **[← Retour README](../../README.md)** | **[→ Business Model Canvas](../3_product_strategy/BUSINESS_MODEL_CANVAS_A3E.md)** | **[→ PRD MVP](../5_product_specifications/PRD_PHASE1_MVP.md)**
 
 ---
 
@@ -16,7 +16,7 @@ Ce roadmap présente une stratégie de développement **sans financement externe
 **Principe fondamental** : Commencer TRÈS petit, valider rapidement, croître organiquement.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 gantt
     title Phases du Roadmap Stratégique
     dateFormat  MM-YYYY
@@ -42,6 +42,9 @@ gantt
     20k$-100k$ MRR :f4, after f3, 12M
 ```
 
+> **Légende**: Ce diagramme Gantt montre notre roadmap sur 30 mois, de la validation initiale jusqu'à la croissance significative, avec trois axes parallèles: les phases de développement produit, l'évolution de l'équipe, et la progression financière (MRR = Monthly Recurring Revenue).
+```
+
 ---
 
 ## 📊 **ANALYSE DE DÉPART**
@@ -62,7 +65,7 @@ gantt
 Transformer ces contraintes en avantages compétitifs par l'agilité extrême et le focus obsessionnel.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 quadrantChart
     title Positionnement Stratégique vs Concurrents
     x-axis Low Adaptabilité Marché Québécois High
@@ -75,6 +78,9 @@ quadrantChart
     Autodesk: [0.3, 0.05]
     Outils Excel actuels: [0.5, 0.9]
     Notre Solution: [0.9, 0.8]
+```
+
+> **Légende**: Ce diagramme quadrant illustre notre positionnement stratégique par rapport aux concurrents existants, montrant notre avantage compétitif sur l'adaptabilité au marché québécois (conformité Loi 25, langue française, processus locaux) et l'accessibilité financière pour les petites municipalités.
 ```
 
 ---
@@ -141,7 +147,7 @@ Livrables:
 | Pilot interest | 25% | Revoir segment |
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 flowchart TD
     A[Phase 0: Customer Discovery] --> B{Problem Validation ≥ 75%?}
     B -- Oui --> C{Willingness to Pay ≥ 50%?}
@@ -154,14 +160,19 @@ flowchart TD
     D -- Non --> D1[Revoir Segment Client]
     D1 --> A
     
+    %% Définition des classes
     classDef decision fill:#FFC107,stroke:#FFA000,color:black
     classDef process fill:#4CAF50,stroke:#388E3C,color:white
     classDef action fill:#F44336,stroke:#D32F2F,color:white
     classDef next fill:#2196F3,stroke:#1976D2,color:white
     
+    %% Application des classes
     class A,B1,C1,D1 process
     class B,C,D decision
     class E next
+```
+
+> **Légende**: Ce diagramme décisionnel illustre notre processus de validation Phase 0, avec trois métriques clés et des boucles de rétroaction permettant de pivoter rapidement si l'une des métriques n'atteint pas le seuil critique défini.
 ```
 
 ---
@@ -233,7 +244,7 @@ Infrastructure:
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph TD
     subgraph "Option A: Rapports de Visite Mobile-First"
         A1[PWA Installable] --> A2[Photos + Annotations]
@@ -260,15 +271,20 @@ graph TD
     A6 --> Release[Release MVP]
     B5 --> Release
     
+    %% Définition des classes
     classDef option fill:#4CAF50,stroke:#388E3C,color:white
     classDef decision fill:#FFC107,stroke:#FFA000,color:black
     classDef feature fill:#42A5F5,stroke:#1976D2,color:white
     classDef release fill:#E91E63,stroke:#C2185B,color:white
     
+    %% Application des classes
     class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5 feature
     class Option_A,Option_B option
     class MVPDecision decision
     class Release release
+```
+
+> **Légende**: Ce diagramme présente les deux options stratégiques pour notre MVP, avec leurs fonctionnalités progressives. Le choix entre l'Option A (Rapports de Visite) et l'Option B (Hub Communication) sera basé sur les résultats de la phase de validation client, pour maximiser l'adoption rapide.
 ```
 
 ### **3. Développement Agile Extrême**
@@ -354,7 +370,7 @@ Tactiques:
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 flowchart LR
     subgraph "Canal Principal: LinkedIn"
         L1[20 messages/jour] --> L2[Taux réponse >20%]
@@ -372,15 +388,20 @@ flowchart LR
     E4 --> Pipeline
     Pipeline --> Clients[Clients Payants]
     
+    %% Définition des classes
     classDef linkedin fill:#0077B5,stroke:#005582,color:white
     classDef events fill:#FF9800,stroke:#F57C00,color:white
     classDef pipeline fill:#4CAF50,stroke:#388E3C,color:white
     classDef clients fill:#9C27B0,stroke:#7B1FA2,color:white
     
+    %% Application des classes
     class L1,L2,L3,L4 linkedin
     class E1,E2,E3,E4 events
     class Pipeline pipeline
     class Clients clients
+```
+
+> **Légende**: Ce diagramme de flux illustre notre stratégie d'acquisition clients via deux canaux complémentaires - LinkedIn pour la prospection digitale directe avec un suivi métriques précis, et les événements sectoriels pour le networking et les démonstrations en personne. Les deux convergent vers un pipeline commercial unifié.
 ```
 
 ### **2. Modèle de Prix Évolutif**
@@ -471,7 +492,7 @@ Q2 2026 (Mois 16-18):
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 timeline
     title Roadmap Développement Produit
     section MVP (Mois 3-5)
@@ -487,6 +508,9 @@ timeline
     section Q2 2026 (Mois 16-18)
         API Publique : Écosystème intégrations
         SSO & Sécurité : Conformité Loi 25
+```
+
+> **Légende**: Ce timeline montre notre progression de développement produit sur 18 mois, de la fonctionnalité MVP essentielle jusqu'à une plateforme complète avec IA, intégrations, et conformité totale, le tout par phases trimestrielles bien définies.
 ```
 
 ### **2. Scaling Architecture**
@@ -538,7 +562,7 @@ Mois 18: Développeur Senior
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph TB
     subgraph "Structure Équipe Mois 18"
         CEO[CEO & CTO<br/>Fondateur]
@@ -549,15 +573,20 @@ graph TB
         CEO --> Sales[Sales Development Rep<br/>Acquisition Clients]
     end
     
+    %% Définition des classes
     classDef ceo fill:#E91E63,stroke:#C2185B,color:white
     classDef dev fill:#42A5F5,stroke:#1976D2,color:white
     classDef csm fill:#4CAF50,stroke:#388E3C,color:white
     classDef sales fill:#FF9800,stroke:#F57C00,color:white
     
+    %% Application des classes
     class CEO ceo
     class Dev1,Dev2 dev
     class CSM csm
     class Sales sales
+```
+
+> **Légende**: Ce diagramme présente notre structure d'équipe optimale au Mois 18, avec 5 personnes couvrant les fonctions essentielles: leadership technique et business, développement, support client et ventes. Cette structure équilibrée permet un ratio efficacité/coût optimal avant la levée de fonds.
 ```
 
 ### **4. Métriques de Traction**
@@ -612,7 +641,7 @@ Ordre de préférence:
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 flowchart TD
     A[Mois 19: Préparation Financement] --> B{Croissance >15%/mois?}
     B -- Non --> C[Optimiser Growth Engine]
@@ -628,13 +657,18 @@ flowchart TD
     I --> L[Angels Québécois]
     I --> M[VC GovTech]
     
+    %% Définition des classes
     classDef decision fill:#FFC107,stroke:#FFA000,color:black
     classDef process fill:#4CAF50,stroke:#388E3C,color:white
     classDef funding fill:#9C27B0,stroke:#7B1FA2,color:white
     
+    %% Application des classes
     class A,C,E,G,H process
     class B,D,F,I decision
     class J,K,L,M funding
+```
+
+> **Légende**: Ce diagramme de décision présente notre méthodologie d'approche au financement, en vérifiant d'abord que nous atteignons les métriques clés requises (croissance, CAC, nombre de clients), puis en explorant les différentes options de financement par ordre de préférence, du Revenue-Based Financing (sans dilution) au VC traditionnel (en dernier recours).
 ```
 
 ### **2. Stack Technique Finale**
@@ -691,7 +725,7 @@ Pricing enterprise:
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph TB
     subgraph "Expansion Géographique"
         QC[Québec<br/>500+ clients]
@@ -719,11 +753,16 @@ graph TB
         SOC --> GV
     end
     
+    %% Définition des classes
     classDef geo fill:#42A5F5,stroke:#1976D2,color:white
     classDef vertical fill:#FF9800,stroke:#F57C00,color:white
     
+    %% Application des classes
     class QC,ON,NB,CAN geo
     class M,CSS,CIUSSS,EDU,SOC,GV vertical
+```
+
+> **Légende**: Ce diagramme illustre notre stratégie d'expansion double - géographique (du Québec vers le reste du Canada) et verticale (des petites municipalités vers des segments plus complexes comme la santé, l'éducation supérieure et les grandes villes). Cette approche séquentielle permet de maximiser la pénétration tout en minimisant les coûts d'acquisition.
 ```
 
 ---
@@ -781,7 +820,7 @@ Règles d'or:
 - NPS et trends
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 graph TD
     subgraph "Cycles de Métriques"
         D[Daily Metrics] --> W[Weekly Reviews]
@@ -802,11 +841,16 @@ graph TD
     W --> DAU & Pipeline & Churn
     D --> DAU & Revenue & Tickets
     
+    %% Définition des classes
     classDef cycle fill:#3F51B5,stroke:#303F9F,color:white
     classDef metric fill:#4CAF50,stroke:#388E3C,color:white
     
+    %% Application des classes
     class D,W,M,Q cycle
     class MRR,DAU,CAC,LTV,Churn,NPS metric
+```
+
+> **Légende**: Ce diagramme illustre notre système de pilotage par métriques, organisé en cycles (journalier, hebdomadaire, mensuel, trimestriel) avec des indicateurs clés adaptés à chaque niveau de décision, permettant de maintenir l'alignement entre l'exécution quotidienne et la stratégie à long terme.
 ```
 
 ---
@@ -822,7 +866,7 @@ graph TD
 | Burnout fondateurs | Critique | Moyenne | Discipline work-life + advisors |
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 quadrantChart
     title Matrice des Risques
     x-axis Low Probabilité High
@@ -836,6 +880,9 @@ quadrantChart
     "Problème recrutement tech": [0.8, 0.7]
     "Changement réglementation": [0.2, 0.9]
     "Burnout fondateurs": [0.5, 0.9]
+```
+
+> **Légende**: Cette matrice des risques positionne les principales menaces au projet selon deux axes: leur probabilité d'occurrence et leur impact potentiel. Les risques dans le quadrant supérieur droit (critiques) nécessitent des plans de mitigation immédiats, tandis que ceux dans les autres quadrants sont à surveiller ou traiter selon leur évolution.
 ```
 
 ---
@@ -864,7 +911,7 @@ quadrantChart
 - [ ] Premier hire identifié
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'lineColor': '#999', 'fontFamily': 'Roboto, sans-serif'}}}%%
 gantt
     title Plan 30-60-90 Jours
     dateFormat  DD
@@ -890,6 +937,9 @@ gantt
     Product-Market Fit         :c3, 61, 30d
     Plan Scale                 :c4, 80, 11d
     Premier Hire               :c5, 85, 6d
+```
+
+> **Légende**: Ce diagramme Gantt détaille notre plan d'action pour les 90 premiers jours du projet, divisé en trois phases de 30 jours. Il présente les activités critiques, leur durée et leur séquencement, avec des objectifs clairs pour chaque période: validation (30j), MVP fonctionnel (60j), et premiers clients payants (90j).
 ```
 
 ---
